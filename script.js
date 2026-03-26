@@ -32,7 +32,7 @@ const COMMENTARY = {
 
 const DEFAULT_CFG = {
   w1m: 0.15, w3m: 0.35, w6m: 0.25, w1y: 0.25,
-  minCap: 5, minPrice: 5,
+  minCap: 5,
   hiProx: 0.85, minTrend: 2,
   volAdj: 0.50, ind: 0.50,
   decile: 90, quartile: 75,
@@ -67,7 +67,7 @@ function computeEngine(rawData, bench, cfg) {
   const cap = cfg.winsorize / 100;
   const bm = [bench.r1m / 100, bench.r3m / 100, bench.r6m / 100, bench.r1y / 100];
 
-  let stocks = rawData.filter(d => d.mc >= cfg.minCap && d.px >= cfg.minPrice && d.r1m != null);
+  let stocks = rawData.filter(d => d.mc >= cfg.minCap && d.r1m != null);
   if (stocks.length === 0) return { stocks: [], regime: "No Data", bench: {} };
 
   stocks = stocks.map(d => {
@@ -472,8 +472,7 @@ function renderConfig() {
     `<div class="text-xs text-slate-400 mt-1">Sum: ${(c.w1m + c.w3m + c.w6m + c.w1y).toFixed(2)} (Auto-Normalized)</div>`
   );
   html += section("Universe Filters",
-    row("Min Market Cap ($B)", "minCap", 1, 0) +
-    row("Min Price ($)", "minPrice", 1, 0)
+    row("Min Market Cap (US$B)", "minCap", 1, 0)
   );
   html += section("Trend Thresholds",
     row("52-Week High Proximity", "hiProx", 0.05, 0.5, 1) +
