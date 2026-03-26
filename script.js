@@ -9,23 +9,23 @@ const MARKET_LABELS = {"R1000":"Russell 1000","TOPIX":"TOPIX","KOSPI":"KOSPI","H
 
 const COMMENTARY = {
   "R1000": {
-    sectors: "**Energy** — strongest sector in the market. +19.7% 1M RS, 100% above 50DMA. Broad, persistent outperformance across all horizons. EPS revisions modestly positive — the move is price-led and commodity-driven rather than estimate-led. **Info Tech** — leading across all horizons with the deepest leader concentration (19 Existing Leaders, 22 earnings-confirmed). Best combined price + fundamental profile in the market: +8.4% average EPS revision with 40% above 50DMA. **Utilities** — quietly leading with positive RS across all horizons. Steady, not flashy. **Comm Services — the only sector inflecting.** 1M RS just turned positive while 3M remains negative — the classic rotation signal. Notably, the sector's average EPS revision is the highest of any sector, suggesting the turn has fundamental support beneath the price inflection. **Consumer Discretionary and Financials** — lagging on both 1M and 3M RS. Financials have the worst breadth in the market.",
-    themes: "**Optical/Data Infrastructure** (SNDK, LITE, WDC, CIEN, COHR, MU) — highest-conviction cluster. All Existing Leaders with trend pass. All held through the drawdown. EPS revisions are extraordinary (SNDK +264%, MU +113%, LITE +47%, CIEN +21%, WDC +21%) — price leadership fully backed by fundamental improvement. **Power/Electrification** (FIX #1, VRT #3, GEV, MTZ, PWR, NVT) — deep cluster of infrastructure buildout names. All leaders with trend pass. The EPS overlay splits the group: VRT/FIX/MTZ have positive revisions and are the stronger holds; PWR/GEV have slightly negative revisions — price-led, less fundamentally anchored. **Consumer/Off-Price Retail** (FIVE, CASY, ROST) — all CONFIRMED with positive EPS. Domestic consumer thesis intact. **Defence** (CW, KRMN) — persistent smaller cluster, both earnings-supported. **Healthcare** (MRNA, RPRX, ROIV) — all rank well on price RS but all have negative EPS revisions. Leading on price, unconfirmed by fundamentals — a divergence worth monitoring.",
+    sectors: "**Energy** — strongest sector in the market. +19.7% 1M RS, 100% above 50DMA. Broad, persistent outperformance across all horizons. EPS revisions modestly positive — the move is price-led and commodity-driven rather than estimate-led.\n**Info Tech** — leading across all horizons with the deepest leader concentration (19 Existing Leaders, 22 earnings-confirmed). Best combined price + fundamental profile in the market: +8.4% average EPS revision with 40% above 50DMA.\n**Utilities** — quietly leading with positive RS across all horizons. Steady, not flashy.\n**Comm Services — the only sector inflecting.** 1M RS just turned positive while 3M remains negative — the classic rotation signal. Notably, the sector's average EPS revision is the highest of any sector, suggesting the turn has fundamental support beneath the price inflection.\n**Consumer Discretionary and Financials** — lagging on both 1M and 3M RS. Financials have the worst breadth in the market.",
+    themes: "**Optical/Data Infrastructure** (SNDK, LITE, WDC, CIEN, COHR, MU) — highest-conviction cluster. All Existing Leaders with trend pass. All held through the drawdown. EPS revisions are extraordinary (SNDK +264%, MU +113%, LITE +47%, CIEN +21%, WDC +21%) — price leadership fully backed by fundamental improvement.\n**Power/Electrification** (FIX #1, VRT #3, GEV, MTZ, PWR, NVT) — deep cluster of infrastructure buildout names. All leaders with trend pass. The EPS overlay splits the group: VRT/FIX/MTZ have positive revisions and are the stronger holds; PWR/GEV have slightly negative revisions — price-led, less fundamentally anchored.\n**Consumer/Off-Price Retail** (FIVE, CASY, ROST) — all CONFIRMED with positive EPS. Domestic consumer thesis intact.\n**Defence** (CW, KRMN) — persistent smaller cluster, both earnings-supported.\n**Healthcare** (MRNA, RPRX, ROIV) — all rank well on price RS but all have negative EPS revisions. Leading on price, unconfirmed by fundamentals — a divergence worth monitoring.",
     synthesis: "Market correcting below 200DMA but leadership structure intact — 92 confirmed leaders. Two highest-conviction positions: the optical/data infrastructure cluster (top-decile RS, multi-horizon confirmation, massive EPS upgrades, held through the drawdown) and the Comm Services inflection (TIGO, NYT — freshest rotation with strongest sector-level EPS support). Pre-breakout watch: PLTR (dual acceleration + revision leader, strongest combined early signal), MRVL (closest emerging name to New Leader graduation), NDAQ (highest raw acceleration in the market)."
   },
   "TOPIX": {
-    sectors: "**Energy** — strongest sector, 100% above 50DMA. Small cluster but leading on every horizon. EPS modestly positive — commodity price trade. **Materials** — strong 3M RS but pulling back on 1M within a medium-term uptrend. Four Existing Leaders with solid EPS (+12.1%) — the pullback may be buyable given the fundamental backdrop. **Financials** — leading with the best sector EPS revision. Strong on price and fundamentals but narrow participation. **Health Care — inflecting.** 1M RS just turned positive while 3M remains negative, with strong sector-level EPS revision — the cleanest rotation signal with fundamental support. **Industrials** — deepest sector with mixed signals: strong 3M RS but negative 1M and negative EPS. Near-term weakness in medium-term uptrend, less fundamentally anchored than Materials. **Consumer Discretionary and Staples** — lagging on both horizons. Avoid.",
-    themes: "**Cable/Power Infrastructure** — Fujikura (#1, Master 94.8), Sumitomo Electric (#3), Furukawa Electric (#4). Three of the top four names in the entire TOPIX screen are cable and power infrastructure companies. All earnings-confirmed (Fujikura +14.9%, Furukawa +35.6%, Sumitomo +27.1%). This is the Japanese expression of the same electrification/data center buildout theme leading the US (FIX, VRT, PWR). Highest-conviction cluster in TOPIX by a wide margin. **Specialty Materials** — JX Advanced Metals (#5, EPS +95%), Resonac (#6, +44%), Mitsui Kinzoku (#7, +59%), Tokyo Ohka Kogyo. Semiconductor materials supply chain — all CONFIRMED with massive EPS upgrades. JX Advanced Metals is a copper smelting play directly tied to data center wiring buildout. **Kioxia** (#2, Master 93.0, EPS +164%) — single strongest earnings confirmation in TOPIX. NAND flash recovery play with extraordinary fundamental backing. **Pharma** — Astellas (New Leader, EPS +89% CONFIRMED) is the standout, leading the Health Care inflection. Otsuka and Takeda also holding with trend pass. **Semi Equipment splitting** — Lasertec rising as New Leader, but Advantest and Disco both fading despite Advantest's strong EPS. Stock selection matters here.",
+    sectors: "**Energy** — strongest sector, 100% above 50DMA. Small cluster but leading on every horizon. EPS modestly positive — commodity price trade.\n**Materials** — strong 3M RS but pulling back on 1M within a medium-term uptrend. Four Existing Leaders with solid EPS (+12.1%) — the pullback may be buyable given the fundamental backdrop.\n**Financials** — leading with the best sector EPS revision. Strong on price and fundamentals but narrow participation.\n**Health Care — inflecting.** 1M RS just turned positive while 3M remains negative, with strong sector-level EPS revision — the cleanest rotation signal with fundamental support.\n**Industrials** — deepest sector with mixed signals: strong 3M RS but negative 1M and negative EPS. Near-term weakness in medium-term uptrend, less fundamentally anchored than Materials.\n**Consumer Discretionary and Staples** — lagging on both horizons. Avoid.",
+    themes: "**Cable/Power Infrastructure** — Fujikura (#1, Master 94.8), Sumitomo Electric (#3), Furukawa Electric (#4). Three of the top four names in the entire TOPIX screen are cable and power infrastructure companies. All earnings-confirmed (Fujikura +14.9%, Furukawa +35.6%, Sumitomo +27.1%). This is the Japanese expression of the same electrification/data center buildout theme leading the US (FIX, VRT, PWR). Highest-conviction cluster in TOPIX by a wide margin.\n**Specialty Materials** — JX Advanced Metals (#5, EPS +95%), Resonac (#6, +44%), Mitsui Kinzoku (#7, +59%), Tokyo Ohka Kogyo. Semiconductor materials supply chain — all CONFIRMED with massive EPS upgrades. JX Advanced Metals is a copper smelting play directly tied to data center wiring buildout.\n**Kioxia** (#2, Master 93.0, EPS +164%) — single strongest earnings confirmation in TOPIX. NAND flash recovery play with extraordinary fundamental backing.\n**Pharma** — Astellas (New Leader, EPS +89% CONFIRMED) is the standout, leading the Health Care inflection. Otsuka and Takeda also holding with trend pass.\n**Semi Equipment splitting** — Lasertec rising as New Leader, but Advantest and Disco both fading despite Advantest's strong EPS. Stock selection matters here.",
     synthesis: "The TOPIX story is cable infrastructure and specialty materials — the top 7 dominated by Kioxia, Fujikura/Furukawa/Sumitomo Electric, and JX/Resonac/Mitsui Kinzoku, all CONFIRMED. This is the Japanese supply chain expression of the global electrification and AI infrastructure theme. Freshest rotation is Health Care, with Astellas as the confirmed lead name. Pre-breakout: Hitachi (sole accelerating name, +8% EPS, largest industrial conglomerate, awaiting trend confirmation)."
   },
   "KOSPI": {
-    sectors: "**Info Tech** — the only sector leading across all horizons. This is the semiconductor complex — SK Hynix and Samsung Electronics anchoring, Hanmi Semiconductor leading on momentum. EPS revisions slightly negative — the move is price-led, typical of a semi cycle driven by forward expectations rather than trailing estimates. **Industrials — inflecting upward** with 5 New Leaders, the most of any sector. This is where the broadest fresh leadership is emerging, concentrated in construction, defence, and electrical infrastructure. **Everything else is lagging.** Financials, Materials, Consumer Discretionary, Health Care, Communication Services — all negative on 1M and 3M RS. KOSPI leadership is narrow: IT and Industrials only. Unlike the US and Japan where multiple sectors are inflecting, Korea is a two-sector market right now.",
-    themes: "**Defence/Infrastructure** — the dominant theme in Korea. Daewoo E&C (#1, New Leader), LS Electric (#2), Hanwha Systems (#3), Hyosung Heavy, Doosan, LIG Nex1 (+46% 1M RS), Korea Aerospace. Five New Leaders from this cluster — the most concentrated source of fresh leadership in any market we screen. The theme cuts across defence electronics, construction, electrical equipment, and aerospace. EPS support is mixed: Doosan (+33%) confirmed, LS Electric unconfirmed. Price is leading across the board, with fundamentals confirming selectively. **Semiconductors** — SK Hynix (CONFIRMED, EPS +31%) is the core holding. Samsung Electronics is Fading — historically strong but losing RS momentum, though massive EPS revision (+75%) suggests the fade may stabilize. Hanmi Semiconductor has the strongest short-term RS in the KOSPI screen but is UNCONFIRMED (negative EPS). Lean toward Hynix. **Financials** — Mirae Asset Securities (#2, EPS +172% CONFIRMED) and SK Square (#3, EPS +142% CONFIRMED) are the highest-confirmation names in the entire KOSPI universe. Both have massive EPS revisions backing top-decile RS.",
+    sectors: "**Info Tech** — the only sector leading across all horizons. This is the semiconductor complex — SK Hynix and Samsung Electronics anchoring, Hanmi Semiconductor leading on momentum. EPS revisions slightly negative — the move is price-led, typical of a semi cycle driven by forward expectations rather than trailing estimates.\n**Industrials — inflecting upward** with 5 New Leaders, the most of any sector. This is where the broadest fresh leadership is emerging, concentrated in construction, defence, and electrical infrastructure.\n**Everything else is lagging.** Financials, Materials, Consumer Discretionary, Health Care, Communication Services — all negative on 1M and 3M RS. KOSPI leadership is narrow: IT and Industrials only. Unlike the US and Japan where multiple sectors are inflecting, Korea is a two-sector market right now.",
+    themes: "**Defence/Infrastructure** — the dominant theme in Korea. Daewoo E&C (#1, New Leader), LS Electric (#2), Hanwha Systems (#3), Hyosung Heavy, Doosan, LIG Nex1 (+46% 1M RS), Korea Aerospace. Five New Leaders from this cluster — the most concentrated source of fresh leadership in any market we screen. The theme cuts across defence electronics, construction, electrical equipment, and aerospace. EPS support is mixed: Doosan (+33%) confirmed, LS Electric unconfirmed. Price is leading across the board, with fundamentals confirming selectively.\n**Semiconductors** — SK Hynix (CONFIRMED, EPS +31%) is the core holding. Samsung Electronics is Fading — historically strong but losing RS momentum, though massive EPS revision (+75%) suggests the fade may stabilize. Hanmi Semiconductor has the strongest short-term RS in the KOSPI screen but is UNCONFIRMED (negative EPS). Lean toward Hynix.\n**Financials** — Mirae Asset Securities (#2, EPS +172% CONFIRMED) and SK Square (#3, EPS +142% CONFIRMED) are the highest-confirmation names in the entire KOSPI universe. Both have massive EPS revisions backing top-decile RS.",
     synthesis: "Defence/infrastructure is generating the most concentrated New Leader burst of any market. Highest-conviction names are the ones where price RS and EPS align: Mirae Asset and SK Square (both >100% EPS, CONFIRMED Existing Leaders), SK Hynix (CONFIRMED semi anchor), and Doosan (New Leader, CONFIRMED). Clear avoid: LG Energy Solution (bottom of universe, worst EPS), Korean internet (Naver) and biotech (Samsung Biologics, Celltrion) not participating. Korea's leadership is in old economy reinvesting in new infrastructure."
   },
   "HSI": {
-    sectors: "**Energy** — strongest sector. 100% above 50DMA, leading on every horizon. Only 3 names (CNOOC, PetroChina, Sinopec) but persistent outperformance. **Utilities** — second strongest. Defensive posture consistent with a market in a downtrend — money is rotating to safety. Two New Leaders (Power Assets, CKI). **Financials** — leading across horizons with the best fundamentally-supported profile. AIA is the standout New Leader. State banks (ICBC, CCB) are the large-cap anchors with positive RS and EPS. **Industrials** — strong 1M RS driven by ZTO Express and CATL. Most dynamic sector on short-term momentum. **Consumer Discretionary, Communication Services, and Info Tech — all lagging** on both 1M and 3M RS. This matters because these sectors contain the names that define Hong Kong for most investors: Tencent, Alibaba, Meituan, Xiaomi, BYD. The entire HK tech/consumer internet complex is underperforming. **No sectors are inflecting.** There are no clean rotation signals in Hong Kong right now.",
-    themes: "Leadership is entirely defensive. **Energy** (CNOOC +18.5% 1M RS, PetroChina +15.0%) — the commodity pair, both with trend pass. **Utilities** (Power Assets, CKI Holdings) — yield-oriented, low-beta. **State Banks** (ICBC, CCB, Bank of China) — steady RS with positive EPS. Plodding but persistent. **Insurance** (AIA, New Leader, +2.7% 1M RS) — the Asian insurance anchor. **Property** (SHK PPT, CONFIRMED with +12.5% EPS) — the closest thing to an earnings-confirmed leader in the index. No thematic growth clusters exist. **Geely** (+26.4% 1M RS) is the strongest short-term momentum name in the entire HSI by a wide margin, but not yet a leader — composite hasn't caught up. **Tech/Internet** — Tencent (Master 33.5), Alibaba (27.4), Meituan, Xiaomi (20.5) all bottom-half. Zero earnings-confirmed leaders in the entire index.",
+    sectors: "**Energy** — strongest sector. 100% above 50DMA, leading on every horizon. Only 3 names (CNOOC, PetroChina, Sinopec) but persistent outperformance.\n**Utilities** — second strongest. Defensive posture consistent with a market in a downtrend — money is rotating to safety. Two New Leaders (Power Assets, CKI).\n**Financials** — leading across horizons with the best fundamentally-supported profile. AIA is the standout New Leader. State banks (ICBC, CCB) are the large-cap anchors with positive RS and EPS.\n**Industrials** — strong 1M RS driven by ZTO Express and CATL. Most dynamic sector on short-term momentum.\n**Consumer Discretionary, Communication Services, and Info Tech — all lagging** on both 1M and 3M RS. This matters because these sectors contain the names that define Hong Kong for most investors: Tencent, Alibaba, Meituan, Xiaomi, BYD. The entire HK tech/consumer internet complex is underperforming.\n**No sectors are inflecting.** There are no clean rotation signals in Hong Kong right now.",
+    themes: "Leadership is entirely defensive.\n**Energy** (CNOOC +18.5% 1M RS, PetroChina +15.0%) — the commodity pair, both with trend pass.\n**Utilities** (Power Assets, CKI Holdings) — yield-oriented, low-beta.\n**State Banks** (ICBC, CCB, Bank of China) — steady RS with positive EPS. Plodding but persistent.\n**Insurance** (AIA, New Leader, +2.7% 1M RS) — the Asian insurance anchor.\n**Property** (SHK PPT, CONFIRMED with +12.5% EPS) — the closest thing to an earnings-confirmed leader in the index. No thematic growth clusters exist.\n**Geely** (+26.4% 1M RS) is the strongest short-term momentum name in the entire HSI by a wide margin, but not yet a leader — composite hasn't caught up.\n**Tech/Internet** — Tencent (Master 33.5), Alibaba (27.4), Meituan, Xiaomi (20.5) all bottom-half. Zero earnings-confirmed leaders in the entire index.",
     synthesis: "Weakest market in our coverage on every metric: worst intermediate trend (negative 3M and 6M), only 6 confirmed leaders, poorest EPS revision landscape, and no sector inflection signals. The leadership that exists is entirely defensive — energy, utilities, state banks, and insurance. If you must be in Hong Kong, own the energy/financial/utility cluster and avoid everything else. The broader signal is that capital should be allocated elsewhere — the US, Japan, and Korea all have stronger regimes, deeper leader pools, and actual earnings confirmation behind their price leadership."
   }
 };
@@ -68,7 +68,7 @@ function computeEngine(rawData, bench, cfg) {
   const bm = [bench.r1m / 100, bench.r3m / 100, bench.r6m / 100, bench.r1y / 100];
 
   let stocks = rawData.filter(d => d.mc >= cfg.minCap && d.px >= cfg.minPrice && d.r1m != null);
-  if (stocks.length === 0) return { stocks: [], regime: "No data", bench: {} };
+  if (stocks.length === 0) return { stocks: [], regime: "No Data", bench: {} };
 
   stocks = stocks.map(d => {
     const r = [d.r1m, d.r3m, d.r6m, d.r1y].map(v => v != null ? Math.max(-cap, Math.min(cap, v / 100)) : 0);
@@ -177,14 +177,14 @@ function computeEngine(rawData, bench, cfg) {
 
   stocks.sort((a, b) => b.ms - a.ms);
 
-  let regime = "Range-bound";
+  let regime = "Range-Bound";
   const b1 = bench.r1m, b3 = bench.r3m, b6 = bench.r6m, b1y = bench.r1y;
-  if (b1 < 0 && b3 < 0 && b6 < 0) regime = "Intermediate downtrend";
-  else if (b1 < -8) regime = b3 > 15 ? "Sharp pullback in strong rally" : b1y > 10 ? "Sharp pullback in uptrend" : "Sharp pullback";
+  if (b1 < 0 && b3 < 0 && b6 < 0) regime = "Intermediate Downtrend";
+  else if (b1 < -8) regime = b3 > 15 ? "Sharp Pullback in Strong Rally" : b1y > 10 ? "Sharp Pullback in Uptrend" : "Sharp Pullback";
   else if (b1 < -3 && b3 < -3) regime = "Correcting";
-  else if (b1 < -3) regime = b1y > 25 ? "Pullback in strong uptrend" : b1y > 10 ? "Pullback in uptrend" : "Pullback";
+  else if (b1 < -3) regime = b1y > 25 ? "Pullback in Strong Uptrend" : b1y > 10 ? "Pullback in Uptrend" : "Pullback";
   else if (b1 > 3) regime = "Rallying";
-  if (bench.px && bench.ma200 && bench.px < bench.ma200) regime += " \u2014 below 200DMA";
+  if (bench.px && bench.ma200 && bench.px < bench.ma200) regime += " \u2014 Below 200DMA";
 
   return {
     stocks: stocks.map(s => ({
@@ -222,7 +222,7 @@ let engineCache = null;
 
 function getEngine() {
   const raw = RAW[state.mkt];
-  if (!raw) return { stocks: [], regime: "No data", bench: {} };
+  if (!raw) return { stocks: [], regime: "No Data", bench: {} };
   return computeEngine(raw.data, raw.bench, state.cfg);
 }
 
@@ -260,7 +260,7 @@ function scoreHtml(v) {
 }
 
 function badgeHtml(text) {
-  if (!text || text === "\u2014") return '<span class="text-slate-300 text-xs">\u2014</span>';
+  if (!text || text === "\u2014" || text === "HOLD") return '<span class="text-slate-300 text-xs">\u2014</span>';
   const styles = {
     "NEW LEADER": "bg-emerald-100 text-emerald-800 border-emerald-200",
     "EXISTING LEADER": "bg-blue-100 text-blue-800 border-blue-200",
@@ -280,7 +280,9 @@ function badgeHtml(text) {
 
 function boldTextHtml(text) {
   if (!text) return "";
-  return esc(text).replace(/\*\*([^*]+)\*\*/g, '<strong class="text-slate-900">$1</strong>');
+  return text.split("\n").map(para =>
+    '<p class="mb-2 last:mb-0">' + esc(para).replace(/\*\*([^*]+)\*\*/g, '<strong class="text-slate-900">$1</strong>') + '</p>'
+  ).join("");
 }
 
 function sortArrow(col) {
@@ -354,7 +356,7 @@ function renderFilters() {
   const fl = state.fl;
   function sel(key, label, opts) {
     return `<select data-filter="${key}" class="px-2 py-1 text-xs border border-slate-200 rounded-md bg-white focus:outline-none">` +
-      opts.map(o => `<option value="${esc(o)}" ${fl[key] === o ? "selected" : ""}>${o === "All" ? label + ": All" : esc(o)}</option>`).join("") +
+      opts.map(o => `<option value="${esc(o)}" ${fl[key] === o ? "selected" : ""}>${o === "All" ? label + ": All" : o === "\u2014" ? "None" : esc(o)}</option>`).join("") +
       `</select>`;
   }
   document.getElementById("filter-bar").innerHTML = `
@@ -383,7 +385,7 @@ function renderTable(filtered, totalCount) {
     { key: "rs1y", label: "RS 1Y", align: "right", sort: true },
     { key: "ms", label: "Master", align: "right", sort: true, border: true },
     { key: "ac", label: "Accel", align: "right", sort: true },
-    { key: "tr", label: "Tr", align: "center" },
+    { key: "tr", label: "Trend", align: "center" },
     { key: "lf", label: "Leader", align: "center", border: true },
     { key: "cf", label: "Confirm", align: "center" },
     { key: "es", label: "Early", align: "center" },
@@ -412,10 +414,11 @@ function renderTable(filtered, totalCount) {
   const rows = filtered.slice(0, 200);
   let tbody = '<tbody>';
   if (rows.length === 0) {
-    tbody += '<tr><td colspan="18" class="px-4 py-8 text-center text-slate-400">No names match filters</td></tr>';
+    tbody += '<tr><td colspan="18" class="px-4 py-8 text-center text-slate-400">No Names Match Filters</td></tr>';
   } else {
-    for (const r of rows) {
-      const rowCls = r.ex === "EXIT" ? "bg-red-50" : r.ex === "WATCH" ? "bg-amber-50" : "";
+    for (let idx = 0; idx < rows.length; idx++) {
+      const r = rows[idx];
+      const rowCls = r.ex === "EXIT" ? "bg-red-50" : r.ex === "WATCH" ? "bg-amber-50" : idx % 2 === 1 ? "bg-slate-50" : "";
       const mcStr = r.mc >= 1000 ? (r.mc / 1000).toFixed(1) + "T" : r.mc.toFixed(0) + "B";
       const trStr = r.tr === 1 ? '<span class="text-emerald-600 font-bold">\u2713</span>' : '<span class="text-slate-300">\u2014</span>';
       tbody += `<tr class="border-b border-slate-100 hover:bg-slate-50 ${rowCls}">`;
@@ -443,7 +446,7 @@ function renderTable(filtered, totalCount) {
   tbody += '</tbody>';
 
   document.getElementById("data-table").innerHTML = thead + tbody;
-  document.getElementById("table-footer").textContent = `Showing ${Math.min(filtered.length, 200)} of ${totalCount} \u2022 Computed from raw Bloomberg data`;
+  document.getElementById("table-footer").textContent = `Showing ${Math.min(filtered.length, 200)} of ${totalCount} \u2022 Computed from Raw Bloomberg Data`;
 }
 
 function renderConfig() {
@@ -466,14 +469,14 @@ function renderConfig() {
     row("3M Weight", "w3m", 0.05, 0, 1, "Primary signal") +
     row("6M Weight", "w6m", 0.05, 0, 1, "Medium-term") +
     row("1Y Weight", "w1y", 0.05, 0, 1, "Secular (skip-month)") +
-    `<div class="text-xs text-slate-400 mt-1">Sum: ${(c.w1m + c.w3m + c.w6m + c.w1y).toFixed(2)} (auto-normalized)</div>`
+    `<div class="text-xs text-slate-400 mt-1">Sum: ${(c.w1m + c.w3m + c.w6m + c.w1y).toFixed(2)} (Auto-Normalized)</div>`
   );
   html += section("Universe Filters",
     row("Min Market Cap ($B)", "minCap", 1, 0) +
     row("Min Price ($)", "minPrice", 1, 0)
   );
   html += section("Trend Thresholds",
-    row("52wk High Proximity", "hiProx", 0.05, 0.5, 1) +
+    row("52-Week High Proximity", "hiProx", 0.05, 0.5, 1) +
     row("Min Trend Score (of 3)", "minTrend", 1, 1, 3)
   );
   html += section("Master Score Blend",
@@ -486,11 +489,11 @@ function renderConfig() {
   );
   html += section("Signal Parameters",
     row("Winsorize Cap (%)", "winsorize", 50, 50, 500) +
-    row("Accel Gate (pctile)", "accelGate", 5, 0, 75)
+    row("Accel Gate (Percentile)", "accelGate", 5, 0, 75)
   );
   html += section("Exit Signals",
-    row("EXIT threshold (of 3)", "exitThresh", 1, 1, 3) +
-    row("WATCH threshold (of 3)", "watchThresh", 1, 1, 3)
+    row("EXIT Threshold (of 3)", "exitThresh", 1, 1, 3) +
+    row("WATCH Threshold (of 3)", "watchThresh", 1, 1, 3)
   );
 
   document.getElementById("cfg-body").innerHTML = html;
@@ -615,7 +618,7 @@ document.addEventListener("input", function(e) {
       }
       // Update weight sum display
       const sumEl = document.querySelector(".text-xs.text-slate-400.mt-1");
-      if (sumEl) sumEl.textContent = `Sum: ${(state.cfg.w1m + state.cfg.w3m + state.cfg.w6m + state.cfg.w1y).toFixed(2)} (auto-normalized)`;
+      if (sumEl) sumEl.textContent = `Sum: ${(state.cfg.w1m + state.cfg.w3m + state.cfg.w6m + state.cfg.w1y).toFixed(2)} (Auto-Normalized)`;
     }
   }
 });
