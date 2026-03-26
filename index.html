@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relative Strength Screener</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-white font-sans">
+
+  <!-- HEADER -->
+  <div class="border-b border-slate-200 bg-slate-50">
+    <div class="px-4 py-3 flex items-center justify-between flex-wrap gap-2">
+      <div>
+        <h1 class="text-xl font-bold text-slate-900 tracking-tight">Relative Strength Screener</h1>
+        <p class="text-xs text-slate-400 mt-0.5">Multi-market RS &bull; Data as of 26 Mar 2026 &bull; Dynamic engine</p>
+      </div>
+      <div class="flex items-center gap-4 flex-wrap">
+        <div id="market-tabs" class="flex gap-1"></div>
+        <div class="h-6 w-px bg-slate-300 hidden sm:block"></div>
+        <div class="flex gap-1">
+          <button id="tab-screener" class="px-3 py-1.5 text-sm font-medium rounded-md bg-slate-800 text-white">Screener</button>
+          <button id="tab-config" class="px-3 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:bg-slate-200">Config</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIG TAB -->
+  <div id="config-panel" class="px-4 py-4 max-w-2xl hidden">
+    <h2 class="text-lg font-bold text-slate-800 mb-1">Configuration</h2>
+    <p class="text-xs text-slate-400 mb-4">Changes recalculate the screener in real-time.</p>
+    <div id="cfg-body"></div>
+    <button id="cfg-reset" class="text-xs text-slate-500 hover:text-slate-800 px-3 py-1.5 rounded border border-slate-200 hover:border-slate-400 mt-2">Reset to defaults</button>
+  </div>
+
+  <!-- SCREENER TAB -->
+  <div id="screener-panel" class="px-4 py-3">
+    <!-- Regime bar -->
+    <div id="regime-bar" class="flex items-center gap-6 px-4 py-2 bg-slate-50 rounded-lg border border-slate-200 mb-3 flex-wrap"></div>
+
+    <!-- KPI strip -->
+    <div id="kpi-strip" class="flex items-center gap-4 mb-3 text-sm flex-wrap"></div>
+
+    <!-- Commentary -->
+    <div id="commentary" class="mb-3 space-y-2"></div>
+
+    <!-- Filters -->
+    <div id="filter-bar" class="flex items-center gap-2 mb-3 flex-wrap"></div>
+
+    <!-- Table -->
+    <div class="overflow-x-auto border border-slate-200 rounded-lg">
+      <table id="data-table" class="w-full text-xs"></table>
+    </div>
+    <div id="table-footer" class="mt-2 text-xs text-slate-400"></div>
+  </div>
+
+  <!-- Load data first, then the app -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

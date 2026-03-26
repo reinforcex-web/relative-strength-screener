@@ -1,0 +1,45 @@
+/* Relative Strength Screener — custom overrides */
+
+/* Smooth transitions on interactive elements */
+button, select, input {
+  transition: all 0.15s ease;
+}
+
+/* Table row hover */
+#data-table tbody tr {
+  transition: background-color 0.1s ease;
+}
+
+/* Sticky table header */
+#data-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Config input focus ring */
+input[type="number"]:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Scrollbar styling for webkit */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Prevent layout shift on sort arrow changes */
+th[data-sortable] {
+  cursor: pointer;
+  user-select: none;
+}
