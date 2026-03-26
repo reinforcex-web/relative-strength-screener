@@ -188,7 +188,7 @@ function computeEngine(rawData, bench, cfg) {
 
   return {
     stocks: stocks.map(s => ({
-      t: s.t, c: s.c, s: s.s, mc: Math.round(s.mc * 10) / 10,
+      t: s.t, c: s.c, s: s.s, px: s.px, mc: Math.round(s.mc * 10) / 10,
       ms: Math.round(s.ms * 10) / 10,
       r1m: Math.round((s.r[0] || 0) * 1000) / 10,
       r3m: Math.round((s.r[1] || 0) * 1000) / 10,
@@ -375,7 +375,8 @@ function renderTable(filtered, totalCount) {
     { key: "t", label: "Ticker", align: "left", sort: true },
     { key: "c", label: "Company", align: "left" },
     { key: "s", label: "Sector", align: "left" },
-    { key: "mc", label: "MCap", align: "right", sort: true },
+    { key: "px", label: "Last Price", align: "right", sort: true },
+    { key: "mc", label: "Mkt Cap (US$)", align: "right", sort: true },
     { key: "r1m", label: "1M", align: "right", sort: true, border: true },
     { key: "r3m", label: "3M", align: "right", sort: true },
     { key: "eps", label: "EPS", align: "right", sort: true },
@@ -384,7 +385,7 @@ function renderTable(filtered, totalCount) {
     { key: "rs6m", label: "RS 6M", align: "right", sort: true },
     { key: "rs1y", label: "RS 1Y", align: "right", sort: true },
     { key: "ms", label: "Master", align: "right", sort: true, border: true },
-    { key: "ac", label: "Accel", align: "right", sort: true },
+    { key: "ac", label: "Acceleration", align: "right", sort: true },
     { key: "tr", label: "Trend", align: "center" },
     { key: "lf", label: "Leader", align: "center", border: true },
     { key: "cf", label: "Confirm", align: "center" },
@@ -394,7 +395,7 @@ function renderTable(filtered, totalCount) {
 
   // Group headers
   let thead = '<thead><tr class="bg-slate-800 text-white">';
-  thead += '<th class="px-2 py-2 text-left text-xs font-semibold" colspan="4">IDENTIFICATION</th>';
+  thead += '<th class="px-2 py-2 text-left text-xs font-semibold" colspan="5">IDENTIFICATION</th>';
   thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">RETURNS</th>';
   thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="4">RELATIVE STRENGTH</th>';
   thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">SCORES</th>';
@@ -414,7 +415,7 @@ function renderTable(filtered, totalCount) {
   const rows = filtered.slice(0, 200);
   let tbody = '<tbody>';
   if (rows.length === 0) {
-    tbody += '<tr><td colspan="18" class="px-4 py-8 text-center text-slate-400">No Names Match Filters</td></tr>';
+    tbody += '<tr><td colspan="19" class="px-4 py-8 text-center text-slate-400">No Names Match Filters</td></tr>';
   } else {
     for (let idx = 0; idx < rows.length; idx++) {
       const r = rows[idx];
@@ -425,6 +426,8 @@ function renderTable(filtered, totalCount) {
       tbody += `<td class="px-2 py-1.5 font-mono font-semibold text-slate-900">${esc(r.t)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-slate-600 truncate max-w-[130px]">${esc(r.c)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-slate-500 truncate max-w-[110px]">${esc(r.s)}</td>`;
+      const pxStr = r.px != null ? r.px.toLocaleString(undefined, { minimumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0, maximumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0 }) : "\u2014";
+      tbody += `<td class="px-2 py-1.5 text-right text-slate-600 font-mono">${pxStr}</td>`;
       tbody += `<td class="px-2 py-1.5 text-right text-slate-600 font-mono">${mcStr}</td>`;
       tbody += `<td class="px-2 py-1.5 text-right border-l border-slate-100">${pctHtml(r.r1m, true)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-right">${pctHtml(r.r3m, true)}</td>`;
