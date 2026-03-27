@@ -386,17 +386,17 @@ function renderTable(filtered, totalCount) {
     { key: "t", label: "Ticker", align: "left", sort: true },
     { key: "c", label: "Company", align: "left" },
     { key: "s", label: "Sector", align: "left" },
-    { key: "px", label: "Last Price", align: "right", sort: true },
-    { key: "mc", label: "Mkt Cap (US$)", align: "right", sort: true },
-    { key: "r1m", label: "1M", align: "right", sort: true, border: true },
-    { key: "r3m", label: "3M", align: "right", sort: true },
-    { key: "eps", label: "EPS", align: "right", sort: true },
-    { key: "rs1m", label: "RS 1M", align: "right", sort: true, border: true },
-    { key: "rs3m", label: "RS 3M", align: "right", sort: true },
-    { key: "rs6m", label: "RS 6M", align: "right", sort: true },
-    { key: "rs1y", label: "RS 1Y", align: "right", sort: true },
-    { key: "ms", label: "Master", align: "right", sort: true, border: true },
-    { key: "ac", label: "Acceleration", align: "right", sort: true },
+    { key: "px", label: "Last Price", align: "center", sort: true },
+    { key: "mc", label: "Mkt Cap (US$)", align: "center", sort: true },
+    { key: "r1m", label: "1M", align: "center", sort: true, border: true },
+    { key: "r3m", label: "3M", align: "center", sort: true },
+    { key: "eps", label: "EPS", align: "center", sort: true },
+    { key: "rs1m", label: "RS 1M", align: "center", sort: true, border: true },
+    { key: "rs3m", label: "RS 3M", align: "center", sort: true },
+    { key: "rs6m", label: "RS 6M", align: "center", sort: true },
+    { key: "rs1y", label: "RS 1Y", align: "center", sort: true },
+    { key: "ms", label: "Master", align: "center", sort: true, border: true },
+    { key: "ac", label: "Acceleration", align: "center", sort: true },
     { key: "tr", label: "Trend", align: "center" },
     { key: "lf", label: "Leader", align: "center", border: true },
     { key: "cf", label: "Confirm", align: "center" },
@@ -438,17 +438,17 @@ function renderTable(filtered, totalCount) {
       tbody += `<td class="px-2 py-1.5 text-slate-600 truncate max-w-[130px]">${esc(r.c)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-slate-500 truncate max-w-[110px]">${esc(r.s)}</td>`;
       const pxStr = r.px != null ? r.px.toLocaleString(undefined, { minimumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0, maximumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0 }) : "\u2014";
-      tbody += `<td class="px-2 py-1.5 text-right text-slate-600 font-mono">${pxStr}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right text-slate-600 font-mono">${mcStr}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right border-l border-slate-100">${pctHtml(r.r1m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right">${pctHtml(r.r3m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right">${pctHtml(r.eps, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right border-l border-slate-100">${pctHtml(r.rs1m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right">${pctHtml(r.rs3m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right">${pctHtml(r.rs6m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right">${pctHtml(r.rs1y, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right border-l border-slate-100">${scoreHtml(r.ms)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-right">${scoreHtml(r.ac)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center text-slate-600 font-mono">${pxStr}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center text-slate-600 font-mono">${mcStr}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${pctHtml(r.r1m, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.r3m, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.eps, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${pctHtml(r.rs1m, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.rs3m, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.rs6m, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.rs1y, true)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${scoreHtml(r.ms)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${scoreHtml(r.ac)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-center">${trStr}</td>`;
       tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${badgeHtml(r.lf)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(r.cf)}</td>`;
