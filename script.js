@@ -311,10 +311,13 @@ function renderMarketTabs() {
 function renderTabButtons() {
   const s = document.getElementById("tab-screener");
   const c = document.getElementById("tab-config");
+  const g = document.getElementById("tab-guide");
   s.className = "px-3 py-1.5 text-sm font-medium rounded-md " + (state.tab === "screener" ? "bg-slate-800 text-white" : "text-slate-500 hover:bg-slate-200");
   c.className = "px-3 py-1.5 text-sm font-medium rounded-md " + (state.tab === "config" ? "bg-slate-800 text-white" : "text-slate-500 hover:bg-slate-200");
+  g.className = "px-3 py-1.5 text-sm font-medium rounded-md " + (state.tab === "guide" ? "bg-slate-800 text-white" : "text-slate-500 hover:bg-slate-200");
   document.getElementById("screener-panel").classList.toggle("hidden", state.tab !== "screener");
   document.getElementById("config-panel").classList.toggle("hidden", state.tab !== "config");
+  document.getElementById("guide-panel").classList.toggle("hidden", state.tab !== "guide");
 }
 
 function renderRegime(engine) {
@@ -390,7 +393,7 @@ function renderTable(filtered, totalCount) {
     { key: "mc", label: "Mkt Cap (US$)", align: "center", sort: true },
     { key: "r1m", label: "1M", align: "center", sort: true, border: true },
     { key: "r3m", label: "3M", align: "center", sort: true },
-    { key: "eps", label: "EPS", align: "center", sort: true },
+    { key: "eps", label: "Est. EPS \u0394", align: "center", sort: true },
     { key: "rs1m", label: "RS 1M", align: "center", sort: true, border: true },
     { key: "rs3m", label: "RS 3M", align: "center", sort: true },
     { key: "rs6m", label: "RS 6M", align: "center", sort: true },
@@ -551,9 +554,10 @@ document.addEventListener("click", function(e) {
     return;
   }
 
-  // Screener / Config tabs
+  // Screener / Config / Guide tabs
   if (btn.id === "tab-screener") { state.tab = "screener"; render(); return; }
   if (btn.id === "tab-config") { state.tab = "config"; render(); return; }
+  if (btn.id === "tab-guide") { state.tab = "guide"; render(); return; }
 
   // Toggle commentary
   if (btn.id === "toggle-commentary") { state.showC = !state.showC; renderKPIs(engineCache); renderCommentary(); return; }
