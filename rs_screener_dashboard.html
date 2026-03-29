@@ -584,26 +584,33 @@ function renderFilters() {
 
 function renderTable(filtered, totalCount) {
   const cols = [
-    { key: "t", label: "Ticker", align: "left", sort: true },
-    { key: "c", label: "Company", align: "left" },
-    { key: "s", label: "Sector", align: "left" },
-    { key: "px", label: "Last Price", align: "center", sort: true },
-    { key: "mc", label: "Mkt Cap (US$)", align: "center", sort: true },
-    { key: "r1m", label: "1M", align: "center", sort: true, border: true },
-    { key: "r3m", label: "3M", align: "center", sort: true },
-    { key: "eps", label: "Est. EPS \u0394", align: "center", sort: true },
-    { key: "rs1m", label: "RS 1M", align: "center", sort: true, border: true },
-    { key: "rs3m", label: "RS 3M", align: "center", sort: true },
-    { key: "rs6m", label: "RS 6M", align: "center", sort: true },
-    { key: "rs1y", label: "RS 1Y", align: "center", sort: true },
-    { key: "ms", label: "Master", align: "center", sort: true, border: true },
-    { key: "ac", label: "Acceleration", align: "center", sort: true },
-    { key: "tr", label: "Trend", align: "center" },
-    { key: "lf", label: "Leader", align: "center", border: true },
-    { key: "cf", label: "Confirm", align: "center" },
-    { key: "es", label: "Early", align: "center" },
-    { key: "ex", label: "Exit", align: "center" },
+    { key: "t", label: "Ticker", align: "left", sort: true, w: 88 },
+    { key: "c", label: "Company", align: "left", w: 130 },
+    { key: "s", label: "Sector", align: "left", w: 120 },
+    { key: "px", label: "Last Price", align: "center", sort: true, w: 82 },
+    { key: "mc", label: "Mkt Cap (US$)", align: "center", sort: true, w: 82 },
+    { key: "r1m", label: "1M", align: "center", sort: true, border: true, w: 66 },
+    { key: "r3m", label: "3M", align: "center", sort: true, w: 66 },
+    { key: "eps", label: "Est. EPS \u0394", align: "center", sort: true, w: 74 },
+    { key: "rs1m", label: "RS 1M", align: "center", sort: true, border: true, w: 66 },
+    { key: "rs3m", label: "RS 3M", align: "center", sort: true, w: 66 },
+    { key: "rs6m", label: "RS 6M", align: "center", sort: true, w: 66 },
+    { key: "rs1y", label: "RS 1Y", align: "center", sort: true, w: 66 },
+    { key: "ms", label: "Master", align: "center", sort: true, border: true, w: 64 },
+    { key: "ac", label: "Acceleration", align: "center", sort: true, w: 84 },
+    { key: "tr", label: "Trend", align: "center", w: 52 },
+    { key: "lf", label: "Leader", align: "center", border: true, w: 108 },
+    { key: "cf", label: "Confirm", align: "center", w: 104 },
+    { key: "es", label: "Early", align: "center", w: 112 },
+    { key: "ex", label: "Exit", align: "center", w: 60 },
   ];
+
+  // Colgroup for fixed widths
+  let colgroup = '<colgroup>';
+  for (const col of cols) {
+    colgroup += `<col style="width:${col.w}px">`;
+  }
+  colgroup += '</colgroup>';
 
   // Group headers
   let thead = '<thead><tr class="bg-slate-800 text-white">';
@@ -635,9 +642,9 @@ function renderTable(filtered, totalCount) {
       const mcStr = r.mc >= 1000 ? (r.mc / 1000).toFixed(1) + "T" : r.mc.toFixed(0) + "B";
       const trStr = r.tr === 1 ? '<span class="text-emerald-600 font-bold">\u2713</span>' : '<span class="text-slate-300">\u2014</span>';
       tbody += `<tr class="border-b border-slate-100 hover:bg-slate-50 ${rowCls}">`;
-      tbody += `<td class="px-2 py-1.5 font-mono font-semibold text-slate-900">${esc(r.t)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-slate-600 truncate max-w-[130px]">${esc(r.c)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-slate-500 truncate max-w-[110px]">${esc(r.s)}</td>`;
+      tbody += `<td class="px-2 py-1.5 font-mono font-semibold text-slate-900 truncate">${esc(r.t)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-slate-600 truncate">${esc(r.c)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-slate-500 truncate">${esc(r.s)}</td>`;
       const pxStr = r.px != null ? r.px.toLocaleString(undefined, { minimumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0, maximumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0 }) : "\u2014";
       tbody += `<td class="px-2 py-1.5 text-center text-slate-600 font-mono">${pxStr}</td>`;
       tbody += `<td class="px-2 py-1.5 text-center text-slate-600 font-mono">${mcStr}</td>`;
@@ -660,7 +667,9 @@ function renderTable(filtered, totalCount) {
   }
   tbody += '</tbody>';
 
-  document.getElementById("data-table").innerHTML = thead + tbody;
+  const tableEl = document.getElementById("data-table");
+  tableEl.style.tableLayout = "fixed";
+  tableEl.innerHTML = colgroup + thead + tbody;
   document.getElementById("table-footer").textContent = `Showing ${Math.min(filtered.length, 200)} of ${totalCount} \u2022 Computed from Raw Bloomberg Data`;
 }
 
