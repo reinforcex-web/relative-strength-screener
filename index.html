@@ -79,20 +79,33 @@
       </div>
 
       <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Signal Badges</div>
-        <table class="w-full text-xs mt-1">
+        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Signal Badges — 3 Columns</div>
+        <p class="text-xs text-slate-500 mb-2">The screener classifies every stock along three independent dimensions. A stock can carry one badge from each column simultaneously (e.g., NEW LEADER + CONFIRMED + SECTOR ROTATION).</p>
+        <div class="text-xs font-semibold text-slate-600 mt-3 mb-1 uppercase tracking-wide">Leader — RS lifecycle stage</div>
+        <table class="w-full text-xs">
           <tbody>
-            <tr class="border-b border-slate-100"><td class="py-1.5 w-32"><span class="px-1.5 py-0.5 rounded border font-medium bg-emerald-100 text-emerald-800 border-emerald-200">NEW LEADER</span></td><td>Top-decile Master Score <strong>and</strong> top-quartile 1M RS — strongest and freshest momentum.</td></tr>
+            <tr class="border-b border-slate-100"><td class="py-1.5 w-36"><span class="px-1.5 py-0.5 rounded border font-medium bg-emerald-100 text-emerald-800 border-emerald-200">NEW LEADER</span></td><td>Top-decile Master Score <strong>and</strong> top-quartile 1M RS — strongest and freshest momentum.</td></tr>
             <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-blue-100 text-blue-800 border-blue-200">EXISTING LEADER</span></td><td>Top-decile Master Score but 1M RS not top-quartile — strong multi-horizon RS that's currently cooling or consolidating.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-100 text-amber-800 border-amber-200">FADING LEADER</span></td><td>Top-quartile Master Score but 1M RS below median — historically strong RS that's losing near-term momentum. Potential exit candidate.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-emerald-100 text-emerald-800 border-emerald-200">CONFIRMED</span></td><td>Top-quartile Master Score <strong>and</strong> top-quartile EPS revisions — price leadership backed by improving fundamentals. Highest conviction.</td></tr>
+            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-100 text-amber-800 border-amber-200">FADING LEADER</span></td><td>Top-quartile Master Score but 1M RS below median — historically strong RS that's losing near-term momentum.</td></tr>
+          </tbody>
+        </table>
+        <div class="text-xs font-semibold text-slate-600 mt-3 mb-1 uppercase tracking-wide">Confirm — do earnings agree with price?</div>
+        <table class="w-full text-xs">
+          <tbody>
+            <tr class="border-b border-slate-100"><td class="py-1.5 w-36"><span class="px-1.5 py-0.5 rounded border font-medium bg-emerald-100 text-emerald-800 border-emerald-200">CONFIRMED</span></td><td>Top-quartile Master Score <strong>and</strong> top-quartile EPS revisions — price leadership backed by improving fundamentals. Highest conviction.</td></tr>
             <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-red-100 text-red-800 border-red-200">UNCONFIRMED</span></td><td>Top-quartile Master Score but bottom-half EPS — price-led without earnings support. Higher risk.</td></tr>
             <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-violet-100 text-violet-800 border-violet-200">REVISION LEADER</span></td><td>Top-quartile EPS revisions but bottom-half Master Score — fundamentals improving faster than price. Potential early setup.</td></tr>
+          </tbody>
+        </table>
+        <div class="text-xs font-semibold text-slate-600 mt-3 mb-1 uppercase tracking-wide">Signal — opportunities and risk alerts</div>
+        <p class="text-xs text-slate-500 mb-1">This column shows one badge per stock. EXIT/WATCH take priority over early signals when both apply.</p>
+        <table class="w-full text-xs">
+          <tbody>
+            <tr class="border-b border-slate-100"><td class="py-1.5 w-36"><span class="px-1.5 py-0.5 rounded border font-medium bg-red-200 text-red-900 border-red-300">EXIT</span></td><td>Three warning signs triggered: below 50DMA, negative 1M RS, and negative acceleration. Consider reducing position.</td></tr>
+            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-200 text-amber-900 border-amber-300">WATCH</span></td><td>Two of three EXIT warning signs triggered. Monitor closely.</td></tr>
             <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-rose-100 text-rose-800 border-rose-200">EMERGING</span></td><td>Mid-rank stock with strong short-term RS, high acceleration, and price above 50DMA — building toward potential leadership.</td></tr>
             <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-violet-100 text-violet-800 border-violet-200">ACCELERATING</span></td><td>Mid-rank stock with top-quintile acceleration — RS is improving rapidly even if the composite hasn't caught up yet.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-100 text-amber-800 border-amber-200">SECTOR ROTATION</span></td><td>Stock in a sector where 1M RS just turned positive while 3M RS remains negative — classic early rotation signal.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-red-200 text-red-900 border-red-300">EXIT</span></td><td>Three warning signs triggered: below 50DMA, negative 1M RS, and negative acceleration. Consider reducing position.</td></tr>
-            <tr><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-200 text-amber-900 border-amber-300">WATCH</span></td><td>Two of three EXIT warning signs triggered. Monitor closely.</td></tr>
+            <tr><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-100 text-amber-800 border-amber-200">SECTOR ROTATION</span></td><td>Stock in a sector where 1M RS just turned positive while 3M RS remains negative — classic early rotation signal.</td></tr>
           </tbody>
         </table>
       </div>

@@ -53,8 +53,7 @@ const DEFAULT_CFG = {
 const FOPTS = {
   leader: ["All", "NEW LEADER", "EXISTING LEADER", "FADING LEADER", "\u2014"],
   confirm: ["All", "CONFIRMED", "UNCONFIRMED", "REVISION LEADER", "\u2014"],
-  early: ["All", "EMERGING", "ACCELERATING", "SECTOR ROTATION", "\u2014"],
-  exit: ["All", "EXIT", "WATCH", "HOLD"],
+  signal: ["All", "EXIT", "WATCH", "EMERGING", "ACCELERATING", "SECTOR ROTATION", "\u2014"],
   trend: ["All", "Pass", "Fail"],
 };
 
@@ -216,13 +215,22 @@ function computeEngine(rawData, bench, cfg) {
   };
 }
 
+// --- Helpers ----------------------------------------------------------------
+
+function getSig(r) {
+  if (r.ex === "EXIT") return "EXIT";
+  if (r.ex === "WATCH") return "WATCH";
+  if (r.es && r.es !== "\u2014") return r.es;
+  return "\u2014";
+}
+
 // --- State -------------------------------------------------------------------
 
 const state = {
   mkt: "R1000",
   sCol: "ms",
   sDir: "desc",
-  fl: { leader: "All", confirm: "All", early: "All", exit: "All", trend: "All", q: "" },
+  fl: { leader: "All", confirm: "All", signal: "All", trend: "All", q: "" },
   showC: true,
   tab: "screener",
   cfg: { ...DEFAULT_CFG },
@@ -241,8 +249,7 @@ function getFiltered(engine) {
   const fl = state.fl;
   if (fl.leader !== "All") d = d.filter(r => r.lf === fl.leader);
   if (fl.confirm !== "All") d = d.filter(r => r.cf === fl.confirm);
-  if (fl.early !== "All") d = d.filter(r => r.es === fl.early);
-  if (fl.exit !== "All") d = d.filter(r => r.ex === fl.exit);
+  if (fl.signal !== "All") d = d.filter(r => getSig(r) === fl.signal);
   if (fl.trend !== "All") d = d.filter(r => fl.trend === "Pass" ? r.tr === 1 : r.tr === 0);
   if (fl.q) { const s = fl.q.toUpperCase(); d = d.filter(r => r.t.toUpperCase().includes(s) || r.c.toUpperCase().includes(s)); }
   d.sort((a, b) => { const va = a[state.sCol] ?? -Infinity; const vb = b[state.sCol] ?? -Infinity; return state.sDir === "desc" ? vb - va : va - vb; });
@@ -377,8 +384,7 @@ function renderFilters() {
     <input type="text" id="search-input" placeholder="Search..." value="${esc(fl.q)}" class="px-2 py-1 text-sm border border-slate-200 rounded-md w-40 focus:outline-none focus:border-slate-400" />
     ${sel("leader", "Leader", FOPTS.leader)}
     ${sel("confirm", "Confirm", FOPTS.confirm)}
-    ${sel("early", "Early", FOPTS.early)}
-    ${sel("exit", "Exit", FOPTS.exit)}
+    ${sel("signal", "Signal", FOPTS.signal)}
     ${sel("trend", "Trend", FOPTS.trend)}
     <button id="clear-filters" class="text-xs text-slate-400 hover:text-slate-700 px-2 py-1">Clear</button>
   `;
@@ -403,8 +409,7 @@ function renderTable(filtered, totalCount) {
     { key: "tr", label: "Trend", align: "center", w: 52 },
     { key: "lf", label: "Leader", align: "center", border: true, w: 108 },
     { key: "cf", label: "Confirm", align: "center", w: 104 },
-    { key: "es", label: "Early", align: "center", w: 112 },
-    { key: "ex", label: "Exit", align: "center", w: 60 },
+    { key: "sig", label: "Signal", align: "center", w: 120 },
   ];
 
   // Colgroup for fixed widths
@@ -420,7 +425,7 @@ function renderTable(filtered, totalCount) {
   thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">RETURNS</th>';
   thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="4">RELATIVE STRENGTH</th>';
   thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">SCORES</th>';
-  thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="4">SIGNALS</th>';
+  thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">SIGNALS</th>';
   thead += '</tr><tr class="bg-slate-100 border-b border-slate-200">';
   for (const col of cols) {
     const bdr = col.border ? " border-l border-slate-200" : "";
@@ -436,11 +441,12 @@ function renderTable(filtered, totalCount) {
   const rows = filtered.slice(0, 200);
   let tbody = '<tbody>';
   if (rows.length === 0) {
-    tbody += '<tr><td colspan="19" class="px-4 py-8 text-center text-slate-400">No Names Match Filters</td></tr>';
+    tbody += '<tr><td colspan="18" class="px-4 py-8 text-center text-slate-400">No Names Match Filters</td></tr>';
   } else {
     for (let idx = 0; idx < rows.length; idx++) {
       const r = rows[idx];
-      const rowCls = r.ex === "EXIT" ? "bg-red-50" : r.ex === "WATCH" ? "bg-amber-50" : idx % 2 === 1 ? "bg-slate-50" : "";
+      const sig = getSig(r);
+      const rowCls = sig === "EXIT" ? "bg-red-50" : sig === "WATCH" ? "bg-amber-50" : idx % 2 === 1 ? "bg-slate-50" : "";
       const mcStr = r.mc >= 1000 ? (r.mc / 1000).toFixed(1) + "T" : r.mc.toFixed(0) + "B";
       const trStr = r.tr === 1 ? '<span class="text-emerald-600 font-bold">\u2713</span>' : '<span class="text-slate-300">\u2014</span>';
       tbody += `<tr class="border-b border-slate-100 hover:bg-slate-50 ${rowCls}">`;
@@ -462,8 +468,7 @@ function renderTable(filtered, totalCount) {
       tbody += `<td class="px-2 py-1.5 text-center">${trStr}</td>`;
       tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${badgeHtml(r.lf)}</td>`;
       tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(r.cf)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(r.es)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(r.ex)}</td>`;
+      tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(sig)}</td>`;
       tbody += '</tr>';
     }
   }
@@ -558,7 +563,7 @@ document.addEventListener("click", function(e) {
   if (btn.dataset.mkt) {
     state.mkt = btn.dataset.mkt;
     state.tab = "screener";
-    state.fl = { leader: "All", confirm: "All", early: "All", exit: "All", trend: "All", q: "" };
+    state.fl = { leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
     render();
     return;
   }
@@ -573,7 +578,7 @@ document.addEventListener("click", function(e) {
 
   // Clear filters
   if (btn.id === "clear-filters") {
-    state.fl = { leader: "All", confirm: "All", early: "All", exit: "All", trend: "All", q: "" };
+    state.fl = { leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
     renderFilters();
     const filtered = getFiltered(engineCache);
     renderTable(filtered, engineCache.stocks.length);
