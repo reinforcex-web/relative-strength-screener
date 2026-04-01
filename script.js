@@ -230,7 +230,7 @@ const state = {
   mkt: "R1000",
   sCol: "ms",
   sDir: "desc",
-  fl: { leader: "All", confirm: "All", signal: "All", trend: "All", q: "" },
+  fl: { sector: "All", leader: "All", confirm: "All", signal: "All", trend: "All", q: "" },
   showC: true,
   tab: "screener",
   cfg: { ...DEFAULT_CFG },
@@ -247,6 +247,7 @@ function getEngine() {
 function getFiltered(engine) {
   let d = [...engine.stocks];
   const fl = state.fl;
+  if (fl.sector !== "All") d = d.filter(r => r.s === fl.sector);
   if (fl.leader !== "All") d = d.filter(r => r.lf === fl.leader);
   if (fl.confirm !== "All") d = d.filter(r => r.cf === fl.confirm);
   if (fl.signal !== "All") d = d.filter(r => getSig(r) === fl.signal);
@@ -380,8 +381,13 @@ function renderFilters() {
       opts.map(o => `<option value="${esc(o)}" ${fl[key] === o ? "selected" : ""}>${o === "All" ? label + ": All" : o === "\u2014" ? "None" : esc(o)}</option>`).join("") +
       `</select>`;
   }
+  // Build sector list dynamically from current engine
+  const sectorSet = new Set();
+  if (engineCache) engineCache.stocks.forEach(r => { if (r.s) sectorSet.add(r.s); });
+  const sectorOpts = ["All", ...Array.from(sectorSet).sort()];
   document.getElementById("filter-bar").innerHTML = `
     <input type="text" id="search-input" placeholder="Search..." value="${esc(fl.q)}" class="px-2 py-1 text-sm border border-slate-200 rounded-md w-40 focus:outline-none focus:border-slate-400" />
+    ${sel("sector", "Sector", sectorOpts)}
     ${sel("leader", "Leader", FOPTS.leader)}
     ${sel("confirm", "Confirm", FOPTS.confirm)}
     ${sel("signal", "Signal", FOPTS.signal)}
@@ -563,7 +569,7 @@ document.addEventListener("click", function(e) {
   if (btn.dataset.mkt) {
     state.mkt = btn.dataset.mkt;
     state.tab = "screener";
-    state.fl = { leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
+    state.fl = { sector: "All", leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
     render();
     return;
   }
@@ -578,7 +584,7 @@ document.addEventListener("click", function(e) {
 
   // Clear filters
   if (btn.id === "clear-filters") {
-    state.fl = { leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
+    state.fl = { sector: "All", leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
     renderFilters();
     const filtered = getFiltered(engineCache);
     renderTable(filtered, engineCache.stocks.length);
