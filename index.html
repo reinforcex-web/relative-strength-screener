@@ -3,164 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relative Strength Screener</title>
+  <title>Relative Strength Screener Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Instrument Sans','system-ui','sans-serif'],mono:['JetBrains Mono','monospace']},colors:{n:{50:'#fafafa',100:'#f5f5f5',200:'#e5e5e5',300:'#d4d4d4',400:'#a3a3a3',500:'#737373',600:'#525252',700:'#404040',800:'#262626',900:'#171717'}}}}}</script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-white font-sans">
+<body class="min-h-screen bg-white font-sans text-n-800 antialiased">
 
-  <!-- HEADER -->
-  <div class="border-b border-slate-200 bg-slate-50">
-    <div class="px-4 py-3 flex items-center justify-between flex-wrap gap-2">
-      <div>
-        <h1 class="text-xl font-bold text-slate-900 tracking-tight">Relative Strength Screener</h1>
-        <p class="text-xs text-slate-400 mt-0.5">Data as of 03 Apr 2026</p>
+  <!-- Header -->
+  <header class="border-b border-n-100">
+    <div class="px-6 py-4 flex items-baseline justify-between">
+      <div class="flex items-baseline gap-4">
+        <h1 class="text-[15px] font-semibold text-n-900 tracking-[-0.01em]">Relative Strength Screener</h1>
+        <span class="text-[11px] text-n-400 font-mono tracking-wide">Data as of 06 Apr 2026</span>
       </div>
-      <div class="flex items-center gap-4 flex-wrap">
-        <div id="market-tabs" class="flex gap-1"></div>
-        <div class="h-6 w-px bg-slate-300 hidden sm:block"></div>
-        <div class="flex gap-1">
-          <button id="tab-screener" class="px-3 py-1.5 text-sm font-medium rounded-md bg-slate-800 text-white">Screener</button>
-          <button id="tab-config" class="px-3 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:bg-slate-200">Config</button>
-          <button id="tab-guide" class="px-3 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:bg-slate-200">Guide</button>
-        </div>
-      </div>
+      <nav class="flex gap-1" id="nav-tabs">
+        <button id="tab-screener" class="tab-btn active">Screener</button>
+        <button id="tab-config" class="tab-btn">Config</button>
+        <button id="tab-guide" class="tab-btn">Guide</button>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- CONFIG TAB -->
-  <div id="config-panel" class="px-4 py-4 max-w-2xl hidden">
-    <h2 class="text-lg font-bold text-slate-800 mb-1">Configuration</h2>
-    <p class="text-xs text-slate-400 mb-4">Changes recalculate the screener in real-time.</p>
+  <!-- Regime strip -->
+  <div id="regime-strip" class="px-6 py-3 border-b border-n-100"></div>
+
+  <!-- Config -->
+  <div id="config-panel" class="px-6 py-6 max-w-xl hidden">
+    <h2 class="text-sm font-semibold text-n-900 mb-1">Configuration</h2>
+    <p class="text-[11px] text-n-400 mb-5">Changes recalculate the screener in real-time.</p>
     <div id="cfg-body"></div>
-    <button id="cfg-reset" class="text-xs text-slate-500 hover:text-slate-800 px-3 py-1.5 rounded border border-slate-200 hover:border-slate-400 mt-2">Reset to Defaults</button>
+    <button id="cfg-reset" class="text-[11px] text-n-400 hover:text-n-700 mt-3 transition-colors">Reset to Defaults</button>
   </div>
 
-  <!-- GUIDE TAB -->
-  <div id="guide-panel" class="px-4 py-4 max-w-3xl hidden">
-    <h2 class="text-lg font-bold text-slate-800 mb-1">How to Use This Screener</h2>
-    <p class="text-xs text-slate-400 mb-4">A quick reference for reading the dashboard and interpreting signals.</p>
-    <div class="space-y-4 text-sm text-slate-700 leading-relaxed">
+  <!-- Guide -->
+  <div id="guide-panel" class="px-6 py-6 max-w-2xl hidden">
+    <h2 class="text-sm font-semibold text-n-900 mb-5">Guide</h2>
+    <div class="space-y-8 text-[12px] text-n-600 leading-relaxed">
 
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">What This Screener Does</div>
-        <p>This tool ranks stocks by <strong>relative strength</strong> — how much a stock is outperforming (or underperforming) its benchmark index across multiple time horizons (1M, 3M, 6M, 1Y). It combines price momentum, volatility adjustment, and industry-relative performance into a single <strong>Master Score</strong>, then overlays earnings revisions, trend quality, and acceleration to classify every name into actionable signals.</p>
+      <div>
+        <h3 class="cmt-label mb-3">Table Columns</h3>
+        <dl class="space-y-2">
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Ticker</dt><dd class="text-n-500">Bloomberg ticker code.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Last Price</dt><dd class="text-n-500">Most recent closing price in local currency.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Mkt Cap (US$)</dt><dd class="text-n-500">Market capitalisation in US$ billions or trillions.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">1M / 3M</dt><dd class="text-n-500">Absolute total return over the past 1 and 3 months.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Est. EPS &#x25B3;</dt><dd class="text-n-500">Bloomberg consensus EPS estimate, 3-month percentage change. Positive = analysts upgrading earnings.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">RS 1M–1Y</dt><dd class="text-n-500">Relative strength vs benchmark (stock return minus index return). Positive = outperforming.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Master Score</dt><dd class="text-n-500">Composite percentile (0–100) blending volatility-adjusted and industry-relative RS across all horizons.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Acceleration</dt><dd class="text-n-500">Whether RS is improving. High values flag names where momentum is freshly building.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Trend</dt><dd class="text-n-500">Pass requires 2 of 3: price above 50DMA, golden cross, and price within 15% of 52-week high.</dd></div>
+        </dl>
       </div>
 
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Reading the Table</div>
-        <table class="w-full text-xs mt-1">
-          <tbody>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold w-32">Last Price</td><td>Most recent closing price in local currency.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold">Mkt Cap</td><td>Market capitalisation in US$ billions (B) or trillions (T).</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold">1M / 3M</td><td>Absolute total return over the past 1 and 3 months.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold">Est. EPS &#x25B3;</td><td>Bloomberg consensus EPS estimate — 3-month percentage change. Measures whether analysts are upgrading (+) or downgrading (−) earnings forecasts. Positive = fundamentals improving.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold">RS 1M–1Y</td><td>Relative strength vs. benchmark — stock return minus index return. Positive = outperforming.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold">Master Score</td><td>Composite percentile (0–100) blending volatility-adjusted RS and industry-relative RS across all horizons. Higher = stronger relative momentum.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold">Acceleration</td><td>Measures whether RS is <em>improving</em> (short-term RS gaining vs. medium-term). High values flag names where momentum is freshly building.</td></tr>
-            <tr><td class="py-1.5 font-semibold">Trend</td><td>Pass (&#x2713;) requires meeting 2 of 3: price above 50DMA, 50DMA above 200DMA (golden cross), and price within 15% of 52-week high.</td></tr>
-          </tbody>
-        </table>
+      <div>
+        <h3 class="cmt-label mb-3">Leader Status</h3>
+        <dl class="space-y-2">
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">New Leader</dt><dd class="text-n-500">Top-decile Master Score and top-quartile 1M RS. Strongest and freshest momentum.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Existing Leader</dt><dd class="text-n-500">Top-decile Master Score, 1M RS not top-quartile. Strong multi-horizon RS, currently consolidating.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Fading Leader</dt><dd class="text-n-500">Top-quartile Master Score, 1M RS below median. Historically strong RS losing near-term momentum.</dd></div>
+        </dl>
       </div>
 
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Signal Badges — 3 Columns</div>
-        <p class="text-xs text-slate-500 mb-2">The screener classifies every stock along three independent dimensions. A stock can carry one badge from each column simultaneously (e.g., NEW LEADER + CONFIRMED + SECTOR ROTATION).</p>
-        <div class="text-xs font-semibold text-slate-600 mt-3 mb-1 uppercase tracking-wide">Leader — RS lifecycle stage</div>
-        <table class="w-full text-xs">
-          <tbody>
-            <tr class="border-b border-slate-100"><td class="py-1.5 w-36"><span class="px-1.5 py-0.5 rounded border font-medium bg-emerald-100 text-emerald-800 border-emerald-200">NEW LEADER</span></td><td>Top-decile Master Score <strong>and</strong> top-quartile 1M RS — strongest and freshest momentum.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-blue-100 text-blue-800 border-blue-200">EXISTING LEADER</span></td><td>Top-decile Master Score but 1M RS not top-quartile — strong multi-horizon RS that's currently cooling or consolidating.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-100 text-amber-800 border-amber-200">FADING LEADER</span></td><td>Top-quartile Master Score but 1M RS below median — historically strong RS that's losing near-term momentum.</td></tr>
-          </tbody>
-        </table>
-        <div class="text-xs font-semibold text-slate-600 mt-3 mb-1 uppercase tracking-wide">Confirm — do earnings agree with price?</div>
-        <table class="w-full text-xs">
-          <tbody>
-            <tr class="border-b border-slate-100"><td class="py-1.5 w-36"><span class="px-1.5 py-0.5 rounded border font-medium bg-emerald-100 text-emerald-800 border-emerald-200">CONFIRMED</span></td><td>Top-quartile Master Score <strong>and</strong> top-quartile EPS revisions — price leadership backed by improving fundamentals. Highest conviction.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-red-100 text-red-800 border-red-200">UNCONFIRMED</span></td><td>Top-quartile Master Score but bottom-half EPS — price-led without earnings support. Higher risk.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-violet-100 text-violet-800 border-violet-200">REVISION LEADER</span></td><td>Top-quartile EPS revisions but bottom-half Master Score — fundamentals improving faster than price. Potential early setup.</td></tr>
-          </tbody>
-        </table>
-        <div class="text-xs font-semibold text-slate-600 mt-3 mb-1 uppercase tracking-wide">Signal — opportunities and risk alerts</div>
-        <p class="text-xs text-slate-500 mb-1">This column shows one badge per stock. EXIT/WATCH take priority over early signals when both apply.</p>
-        <table class="w-full text-xs">
-          <tbody>
-            <tr class="border-b border-slate-100"><td class="py-1.5 w-36"><span class="px-1.5 py-0.5 rounded border font-medium bg-red-200 text-red-900 border-red-300">EXIT</span></td><td>Three warning signs triggered: below 50DMA, negative 1M RS, and negative acceleration. Consider reducing position.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-200 text-amber-900 border-amber-300">WATCH</span></td><td>Two of three EXIT warning signs triggered. Monitor closely.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-rose-100 text-rose-800 border-rose-200">EMERGING</span></td><td>Mid-rank stock with strong short-term RS, high acceleration, and price above 50DMA — building toward potential leadership.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-violet-100 text-violet-800 border-violet-200">ACCELERATING</span></td><td>Mid-rank stock with top-quintile acceleration — RS is improving rapidly even if the composite hasn't caught up yet.</td></tr>
-            <tr><td class="py-1.5"><span class="px-1.5 py-0.5 rounded border font-medium bg-amber-100 text-amber-800 border-amber-200">SECTOR ROTATION</span></td><td>Stock in a sector where 1M RS just turned positive while 3M RS remains negative — classic early rotation signal.</td></tr>
-          </tbody>
-        </table>
+      <div>
+        <h3 class="cmt-label mb-3">Confirmation</h3>
+        <dl class="space-y-2">
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Confirmed</dt><dd class="text-n-500">Top-quartile Master Score and top-quartile EPS revisions. Price leadership backed by improving fundamentals.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Unconfirmed</dt><dd class="text-n-500">Top-quartile Master Score, bottom-half EPS. Price-led without earnings support.</dd></div>
+        </dl>
       </div>
 
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Regime Bar</div>
-        <p>The regime bar at the top shows the benchmark index's return across all horizons and classifies the market environment (e.g., "Intermediate Downtrend," "Pullback in Strong Uptrend"). When the index trades below its 200-day moving average, this is flagged as "Below 200DMA." Use the regime to calibrate position sizing and risk appetite — strong uptrends favour adding to leaders; downtrends favour tighter stops and smaller positions.</p>
-      </div>
-
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Commentary Sections</div>
-        <table class="w-full text-xs mt-1">
-          <tbody>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold w-32"><span class="inline-block w-3 h-3 rounded bg-amber-100 border border-amber-300 mr-1 align-middle"></span> Price Action</td><td>Previous day's session — what moved, how it connects to the screener's thematic clusters, and what to watch next.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold"><span class="inline-block w-3 h-3 rounded bg-slate-100 border border-slate-300 mr-1 align-middle"></span> Sectors</td><td>Sector-level RS rankings, breadth, and EPS revision landscape. Identifies which sectors are leading, lagging, and inflecting.</td></tr>
-            <tr class="border-b border-slate-100"><td class="py-1.5 font-semibold"><span class="inline-block w-3 h-3 rounded bg-slate-100 border border-slate-300 mr-1 align-middle"></span> Themes</td><td>Cross-sector thematic clusters — groups of stocks linked by a common fundamental driver (e.g., electrification, data infrastructure, defence).</td></tr>
-            <tr><td class="py-1.5 font-semibold"><span class="inline-block w-3 h-3 rounded bg-blue-100 border border-blue-300 mr-1 align-middle"></span> Synthesis</td><td>The actionable bottom line — highest-conviction positions, developing rotations, and pre-breakout watch list.</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-        <div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2">Workflow Tips</div>
-        <p><strong>Finding leaders:</strong> Filter by Leader → "NEW LEADER" or "EXISTING LEADER" and Confirm → "CONFIRMED" to see the highest-conviction names — strong RS backed by earnings.<br>
-        <strong>Finding early setups:</strong> Filter by Early → "EMERGING" or "ACCELERATING" to catch names building momentum before they reach leader status.<br>
-        <strong>Risk management:</strong> Filter by Exit → "EXIT" to see positions where the trend is breaking down across multiple signals.<br>
-        <strong>Cross-market comparison:</strong> Switch between markets using the tabs to identify which regions have the deepest leadership pools and strongest regimes.<br>
-        <strong>Tuning the engine:</strong> Use the Config tab to adjust composite weights, market cap thresholds, and signal parameters. Changes recalculate in real-time.</p>
+      <div>
+        <h3 class="cmt-label mb-3">Signals</h3>
+        <dl class="space-y-2">
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Emerging</dt><dd class="text-n-500">Mid-rank with strong 1M RS and high acceleration. Building toward potential leadership.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Accelerating</dt><dd class="text-n-500">Mid-rank with top-quintile acceleration. RS improving rapidly.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Sector Rotation</dt><dd class="text-n-500">Strong stock in a weak sector. Early rotation signal.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Watch</dt><dd class="text-n-500">2 of 3 risk signals triggered. Deterioration warning.</dd></div>
+          <div class="flex gap-3"><dt class="font-medium text-n-800 w-28 shrink-0">Exit</dt><dd class="text-n-500">All 3 risk signals triggered. Strongest sell signal.</dd></div>
+        </dl>
       </div>
 
     </div>
   </div>
 
-  <!-- SCREENER TAB -->
-  <div id="screener-panel" class="px-4 py-3">
-    <!-- Regime bar -->
-    <div id="regime-bar" class="flex items-center gap-6 px-4 py-2 bg-slate-50 rounded-lg border border-slate-200 mb-3 flex-wrap"></div>
-
-    <!-- KPI strip -->
-    <div id="kpi-strip" class="flex items-center gap-4 mb-3 text-sm flex-wrap"></div>
-
-    <!-- Commentary -->
-    <div id="commentary" class="mb-3 space-y-2"></div>
-
-    <!-- Filters -->
+  <!-- Screener -->
+  <div id="screener-panel" class="px-6 pt-4 pb-6">
+    <div id="regime-bar" class="flex items-center gap-8 mb-5 flex-wrap"></div>
+    <div id="daily-panel" class="mb-5"></div>
+    <div id="sector-heatmap" class="mb-5"></div>
+    <div id="commentary" class="mb-5"></div>
     <div id="filter-bar" class="flex items-center gap-2 mb-3 flex-wrap"></div>
-
-    <!-- Table -->
-    <div class="overflow-x-auto border border-slate-200 rounded-lg">
+    <div class="overflow-x-auto">
       <table id="data-table" class="w-full text-xs"></table>
     </div>
-    <div id="table-footer" class="mt-2 text-xs text-slate-400"></div>
+    <div id="table-footer" class="mt-3 text-[11px] text-n-400"></div>
   </div>
 
-  <!-- Load data first, then the app -->
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>

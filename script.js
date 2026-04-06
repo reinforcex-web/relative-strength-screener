@@ -5,38 +5,38 @@
 
 // --- Constants ---------------------------------------------------------------
 
-const MARKET_LABELS = {"R1000":"Russell 1000","TOPIX":"TOPIX","KOSPI":"KOSPI","HSI":"Hang Seng","CSI300":"CSI 300"};
+const MARKET_LABELS = {"CSI300":"CSI 300","HSI":"Hang Seng","KOSPI":"KOSPI","R1000":"Russell 1000","TOPIX":"TOPIX"};
 
 const COMMENTARY = {
   "R1000": {
-    sectors: "**Energy** \u2014 +8.7% 1M RS, 94% trend pass, +12.4% avg EPS. 6 confirmed names. Energy surged on the 2 Apr session (WTI +12%) after Trump\u2019s primetime speech signalling 2\u20133 more weeks of war. The sector whipsawed from peace-trade selling back to war premium.\n**Info Tech** \u2014 +2.7% 1M RS with the deepest confirmed pool (24 confirmed from 10 Existing + 10 New Leaders). SNDK at +242.3% EPS is the most extreme earnings backing. 35% trend pass \u2014 improving.\n**Utilities** \u2014 +1.7% 1M RS, 86% trend pass. 3 confirmed names. Defensive strength holding.\n**Financials** \u2014 -2.0% 1M RS but the acceleration cluster is the strongest in the market. MS +99.4, JPM +88, BAC +95, ALLY +99.8. NTRS graduated to New Leader #4 CONFIRMED. 10 confirmed names.\n**Industrials** \u2014 largest sector (112 names), -4.8% 1M RS. 12 confirmed. The electrification cluster (FIX #1, VRT #2, PWR #8, MTZ #15, CW #13) still holds the top ranks despite the steepest sector-level drawdown.\n**Consumer Discretionary** \u2014 -3.9% 1M RS but 7 confirmed. FIVE #6 (+102.3% EPS). Tesla -5.5% on weak Q1 deliveries was the session\u2019s biggest single-stock event.",
-    themes: "**Power/Electrification** (FIX #1, VRT #2, PWR #8, MTZ #15, CW #13, CAT #11) \u2014 FIX reclaimed #1 (MS 90.9, +15.3% EPS CONFIRMED). VRT at +9.9% EPS. The cluster added CAT (Existing Leader). This group is the most regime-agnostic \u2014 performs whether oil stays high or peace comes.\n**Optical/Data Infrastructure** (SNDK #14, LITE #18, WDC #20, TER #16, MKSI #9, LRCX, AMAT, UI, CIEN, KLAC, LSCC, MPWR, JBL, DELL, AMKR) \u2014 the broadest confirmed tech cluster we\u2019ve recorded. 15 names, 13 CONFIRMED. SNDK +242.3% EPS and TER +73.7% EPS are the standouts. Semi/optical bounced on the 2 Apr recovery.\n**Consumer/Off-Price** (FIVE #6, ROST, HLT, CASY, DAR) \u2014 FIVE at MS 89.3 (+102.3% EPS). DAR (+23.5% EPS) is a new addition from Consumer Staples.\n**Financials Acceleration** \u2014 MS +99.4, BAC +95, ALLY +99.8, EXPE +100, SF +98 acceleration. NTRS graduated to #4 CONFIRMED. BK, CFG, STT, PNC, KEY all New Leaders. The bank cluster is the broadest we\u2019ve seen.\n**Energy** (APA +34.2% 1M RS, VLO +14.4%, CF) \u2014 surged back on 2 Apr as war premium returned.",
-    synthesis: "R1000 in intermediate downtrend below 200DMA but 75 confirmed leaders \u2014 the deepest this cycle. The 2 Apr session was a microcosm of the regime: Dow -600pts at the open on Trump\u2019s war speech, then full recovery on Iran/Oman Hormuz protocol reports. The electrification cluster (FIX, VRT, CW, MTZ) is the highest-conviction axis \u2014 regime-agnostic, all CONFIRMED. The optical/data infrastructure cluster has broadened to 15 names with 13 confirmed \u2014 the most concentrated tech leadership we\u2019ve recorded. Pre-breakout: EXPE (+100 acceleration, +87% EPS \u2014 the single strongest combined signal), PLTR (Emerging +97.6, +30.5% EPS), ROKU (Emerging +98.6, +909% EPS), AMZN (+98.3), AVGO (+99.5, +10.6% EPS).",
-    daily: "**S\u0026P 500 +0.11%, Nasdaq +0.18%, Dow -0.13%.** Extreme intraday volatility: Dow down 668pts at the open after Trump\u2019s primetime speech vowed to \u201cbring Iran back to the stone ages\u201d over 2\u20133 weeks. Markets clawed back to flat after Iran/Oman announced a Hormuz monitoring protocol. Last trading day before Good Friday \u2014 markets closed April 3.\n**Oil surged.** WTI +12% to $112, Brent +8% to $109. The peace trade from earlier in the week was fully reversed. Our screener\u2019s energy names (APA, VLO, CF) rallied back as the war premium returned.\n**Tesla -5.5%** on Q1 deliveries of 358K vs 366K expected. Rivian +3%. In our screener, TSLA is accelerating (MS 45, +81.9 acceleration) but far from leadership.\n**Tech recovered from the lows.** Nvidia, Microsoft, AMD all gained 1\u20133% as the morning selloff reversed. Our optical/data infra cluster (SNDK, LITE, WDC, TER, MKSI \u2014 all CONFIRMED) held through the volatility.\n**Financials mixed.** NTRS (#4, New Leader CONFIRMED) held. The bank acceleration cluster (MS +99.4, BAC +95) is intact but the war-extension narrative dampens the Financials rotation thesis near-term.\n**Weekly context:** S\u0026P +3.4% for the week \u2014 the first weekly gain since the conflict began. Markets are closed for Good Friday.\n**Net read:** The 2 Apr session crystallized the regime: energy vs everything else, driven by headline risk. The Iran/Oman Hormuz protocol is a potential game-changer \u2014 even partial Strait reopening would collapse the oil premium and accelerate the Financials/tech rotation. Until then, the electrification cluster (FIX, VRT) and optical infra are the highest-conviction themes."
+    sectors: "**Energy** \u2014 +8.2% 1M RS, 94% trend pass. Eight confirmed names \u2014 up from six. APA (#9, +30.9% RS, +60.1% EPS CONFIRMED) leads. War premium intact as WTI holds above $110.\n**Materials** \u2014 +3.3% 1M RS, 57% trend pass. Eight confirmed names. ALB (+6,982% EPS CONFIRMED) distorts the average. AA (+14.3% RS CONFIRMED) is the cleanest entry.\n**Information Technology** \u2014 +3.0% 1M RS, 35% trend pass. Twenty-two confirmed names. CIEN (+54.5% RS CONFIRMED) is the highest-RS New Leader. The optical/data infra cluster (MKSI #10, SNDK, LITE, WDC, DELL, LRCX, KLAC, JBL, LSCC, ONTO) remains the deepest confirmed pool.\n**Utilities** \u2014 +2.5% 1M RS, 86% trend pass. No confirmed leaders but the strongest breadth in the index after Energy.\n**Health Care** \u2014 +0.1% 1M RS, 39% trend pass. Two confirmed names. ROIV (#7, Existing Leader) and RVMD (#9) hold top-10 ranks. Eight Sector Rotation signals emerged \u2014 the broadest in any sector.\n**Financials** \u2014 -0.5% 1M RS, 37% trend pass. Four confirmed names \u2014 down sharply from ten. NTRS (#22, CONFIRMED) dropped from #4. WBS (#4) and MTB (#15) are New Leaders.\n**Communication Services** \u2014 -0.8% 1M RS, 29% trend pass. TIGO (#6, Existing Leader UNCONFIRMED). TKO (#28, New Leader UNCONFIRMED).\n**Consumer Staples** \u2014 -1.2% 1M RS, 45% trend pass. Four confirmed. CASY (#17, +14.1% RS CONFIRMED) is a New Leader.\n**Industrials** \u2014 -1.2% 1M RS, 53% trend pass. Fourteen confirmed \u2014 the deepest sector pool. VRT (#2, MS 87.9 CONFIRMED) and FIX (#5, MS 86.9 CONFIRMED) hold top-5 ranks. MTZ (#5, +20% RS CONFIRMED) is a New Leader.\n**Real Estate** \u2014 -1.4% 1M RS, 57% trend pass. Four confirmed names. EQIX (+19.8% EPS CONFIRMED) anchors.\n**Consumer Discretionary** \u2014 -1.9% 1M RS, 29% trend pass. Six confirmed. BWA (#1, MS 88.2, New Leader) leads the entire index. FIVE (#3, +26.5% EPS CONFIRMED).",
+    themes: "**Electrification Infrastructure** \u2014 VRT #2 (MS 87.9, +16.1% EPS CONFIRMED), FIX #5 (MS 86.9, +19.4% EPS CONFIRMED), CW #8 (MS 86.3), MTZ #5 (MS 85.7, +5.6% EPS CONFIRMED), GEV (#4, +6.7% EPS CONFIRMED). Five names in the top 10. Regime-agnostic: performs regardless of oil trajectory.\n**Optical/Data Infrastructure** \u2014 MKSI #10 (+12.7% EPS CONFIRMED), CIEN (+54.5% RS CONFIRMED), SNDK (+242.3% EPS CONFIRMED), LITE (+46.7% EPS CONFIRMED), WDC (+20.4% EPS CONFIRMED), DELL (+12.9% EPS CONFIRMED), LRCX (+9.5% EPS CONFIRMED), KLAC, LSCC (+7.8% EPS CONFIRMED), JBL (+6.6% EPS CONFIRMED), ONTO (+6.8% EPS CONFIRMED). Eleven confirmed names in the cluster.\n**Health Care Rotation** \u2014 Eight Sector Rotation signals: RPRX, MRK, UTHR (+20.4% RS), PFE, REGN, GMED, EW, ELAN. The broadest rotation signal in any sector. Health Care 1M RS just turned positive.\n**Energy War Premium** \u2014 APA (+30.9% RS, +60.1% EPS CONFIRMED), VLO, FTI. All CONFIRMED.\n**BWA Breakout** \u2014 BorgWarner (#1, MS 88.2, New Leader) tops the entire index. EV component supplier benefiting from $100+ oil accelerating EV adoption.",
+    synthesis: "R1000 in intermediate downtrend below 200DMA with 73 confirmed leaders \u2014 down from 75. The confirmed pool contracted as Financials confirmed count dropped from 10 to 4. Electrification (VRT, FIX, MTZ, GEV, CW) and optical infrastructure (11 CONFIRMED) remain the highest-conviction clusters. Health Care generated 8 Sector Rotation signals \u2014 the broadest early-rotation in the index. BWA topped the index on the EV component thesis. Pre-breakout: INSM (Emerging +93.5), DAL (Emerging +93.4), HPE (Emerging +88.7), TWLO (Emerging +85.7).",
+    daily: "**S\u0026P 500 6,582.69 (+0.11%), Nasdaq +0.18%, Dow -0.13% on 2 Apr.** Markets closed for Good Friday 3 Apr. Extreme intraday reversal on the final trading day: Dow fell 668 points at the open after Trump\u2019s Wednesday-night address vowed 2\u20133 more weeks of war against Iran. Markets recovered to flat after Iran and Oman announced a Strait of Hormuz monitoring protocol.\n**Oil surged.** WTI +12% to $112, Brent +8% to $109. The peace trade from earlier in the week was fully reversed.\n**Tesla -5.5%** on Q1 deliveries of 358K vs 366K expected. Production of 408K left a 50K inventory build. Pharma tariff reports (up to 100% on imports) hit Eli Lilly and Amgen ~2%.\n**In the screener,** BWA jumped to #1 on the EV component thesis. The electrification cluster (VRT #2, FIX #5) held. The optical/data infra cluster (MKSI, CIEN, SNDK \u2014 all CONFIRMED) recovered from morning lows.\n**Financials weakened.** Confirmed count dropped from 10 to 4. NTRS fell from #4 to #22. The bank acceleration thesis faces headwinds from the war-extension timeline.\n**Net read:** The session confirmed the regime\u2019s binary structure: energy vs everything else, headline-driven. Health Care\u2019s 8 Sector Rotation signals are the key new development. Markets reopen Monday 6 Apr."
   },
   "TOPIX": {
-    sectors: "**Energy** \u2014 +11.1% 1M RS, 100% trend pass. INPEX (#16, UNCONFIRMED).\n**Health Care** \u2014 +6.6% 1M RS, 67% trend pass. Astellas (#12, +89.1% EPS CONFIRMED) and Otsuka (#20) lead the strongest new rotation.\n**Utilities** \u2014 +3.4% 1M RS, 100% trend pass. Defensive.\n**Financials** \u2014 +1.6% 1M RS, 73% trend pass. Tokio Marine Emerging. Steady but no leaders.\n**Consumer Staples** \u2014 +2.3% 1M RS. Japan Tobacco (Sector Rotation).\n**Industrials** \u2014 -1.1% 1M RS. Cable infra (Fujikura #1, Furukawa #3) holds top ranks. Marubeni (#4) regained CONFIRMED status.\n**Materials** \u2014 -6.0% 1M RS but 3 confirmed names with massive EPS (Mitsui Kinzoku +88.6%, JX Metals +95.3%, Resonac +44.2%). All on WATCH.\n**Info Tech** \u2014 -1.0% 1M RS, 28% trend pass. Kioxia (#2, +165.6% EPS CONFIRMED), Lasertec (#6, CONFIRMED) are the exceptions. Disco, Ibiden fading.",
-    themes: "**Cable/Power Infrastructure** \u2014 Fujikura (#1, MS 92.4, +11.1% EPS CONFIRMED), Kioxia (#2, +165.6% EPS CONFIRMED), Furukawa (#3, +45.3% EPS CONFIRMED). Top 3 all CONFIRMED with massive EPS. Sumitomo Electric (#8, +94.8% EPS CONFIRMED) on WATCH.\n**Trading Houses** \u2014 Marubeni (#4, +21.6% EPS CONFIRMED) regained CONFIRMED. Mitsui (#5, UNCONFIRMED), Mitsubishi (#9, UNCONFIRMED). Mixed.\n**Pharma** \u2014 Astellas (#12, +89.1% EPS CONFIRMED), Panasonic (#11, +73.4% EPS CONFIRMED). Health Care inflection strengthening.\n**Specialty Materials** \u2014 Resonac (#7, +44.2% CONFIRMED but WATCH), Mitsui Kinzoku (#10, +88.6% CONFIRMED but WATCH), JX Metals (#15, +95.3% CONFIRMED but WATCH). The massive EPS / WATCH divergence persists.\n**Telecom rotation** \u2014 KDDI (+90.1), SoftBank Corp (+95), NTT (+98.6), LY Corp (+94.3). All Emerging with near-perfect acceleration. Hitachi accelerating at +100.",
-    synthesis: "TOPIX in pullback within strong uptrend (-3.6% 1M, +6.7% 3M). 15 confirmed leaders. Cable infrastructure (Fujikura, Kioxia, Furukawa) holds the top 3 with all CONFIRMED. Marubeni regained CONFIRMED \u2014 first trading house to recover fundamental backing. Health Care inflection deepening (Astellas +89.1%, Panasonic +73.4%). Specialty materials remain the widest price/fundamental divergence \u2014 massive EPS but all on WATCH. Pre-breakout: KDDI, SoftBank Corp, NTT (all 90%+ acceleration), Hitachi (+100 acceleration, the strongest in TOPIX), Seven \u0026 I (+92.9).",
-    daily: "**TOPIX gained as the 2 Apr oil surge provided a mixed backdrop.** Japan\u2019s 93% Hormuz dependence means the war-extension narrative is a macro headwind, but the Iran/Oman protocol report triggered an intraday recovery.\n**Cable infrastructure held.** Fujikura (#1) and Furukawa (#3) outperformed. The cluster is CONFIRMED across the top 3 \u2014 the strongest positioning in any Asian market.\n**Marubeni regained CONFIRMED.** The trading house (#4, +21.6% EPS) is the first sogo shosha to recover fundamental backing this cycle.\n**Materials under pressure.** Resonac, Mitsui Kinzoku, JX Metals all remain on WATCH despite massive EPS. The near-term drawdown overrides fundamentals.\n**Telecom building.** KDDI, SoftBank Corp, NTT all accelerating. Hitachi at +100 acceleration is the strongest signal in TOPIX.\n**Net read:** The war-extension speech reversed the peace trade but TOPIX\u2019s uptrend structure is intact. Cable infra and pharma are positioned for either outcome."
+    sectors: "**Energy** \u2014 +13.4% 1M RS, 100% trend pass. One confirmed name. INPEX (1605) leads. Dominant relative performance.\n**Health Care** \u2014 +5.9% 1M RS, 56% trend pass. Three confirmed names \u2014 up from one. Astellas Pharma (4503, #15, +51.8% EPS CONFIRMED) anchors the rotation.\n**Consumer Staples** \u2014 +3.1% 1M RS, 50% trend pass. One confirmed name. Japan Tobacco (2914, Sector Rotation).\n**Utilities** \u2014 +2.5% 1M RS, 100% trend pass. Perfect breadth, no confirmed leaders.\n**Financials** \u2014 +1.1% 1M RS, 77% trend pass. No confirmed leaders but best trend breadth outside Energy and Utilities. Tokio Marine (8766, Emerging +79.4).\n**Industrials** \u2014 +0.5% 1M RS, 56% trend pass. Four confirmed. Fujikura (5803, #3, MS 89.6 CONFIRMED) and Furukawa Electric (5801, #5, +34.2% EPS CONFIRMED) hold top ranks. Marubeni (8002, #9) graduated to New Leader.\n**Communication Services** \u2014 +0.1% 1M RS, 33% trend pass. KDDI (9433, Emerging +91.5), NTT (9432, Emerging +97.2). Acceleration cluster building.\n**Information Technology** \u2014 -1.5% 1M RS, 39% trend pass. Two confirmed. Kioxia (285A, #2, +76% EPS CONFIRMED) and Lasertec (6920, #10, New Leader CONFIRMED). Ibiden (4062, #6, New Leader UNCONFIRMED).\n**Materials** \u2014 -2.5% 1M RS, 45% trend pass. Three confirmed with extreme EPS: Mitsui Kinzoku (5706, #4, +49.7% EPS CONFIRMED), Resonac (4004, #7), JX Metals (5016).\n**Consumer Discretionary** \u2014 -4.2% 1M RS, 37% trend pass. Two confirmed. Sumitomo Electric (5802, #1, MS 91.7 CONFIRMED) leads the entire index. Panasonic (6752, #14, New Leader).\n**Real Estate** \u2014 -9.1% 1M RS, 50% trend pass. Weakest sector. No confirmed names.",
+    themes: "**Cable/Power Infrastructure** \u2014 Sumitomo Electric (5802, #1, MS 91.7, +14.5% EPS CONFIRMED), Kioxia (285A, #2, +76% EPS CONFIRMED), Fujikura (5803, #3, +6.8% EPS CONFIRMED), Furukawa Electric (5801, #5, +34.2% EPS CONFIRMED). Top 5 includes 4 cable/power names, all CONFIRMED.\n**Trading Houses** \u2014 Marubeni (8002, #9, New Leader), Mitsui (8031, #8, Existing Leader UNCONFIRMED), Mitsubishi (8058). Marubeni graduated to New Leader.\n**Pharma Rotation** \u2014 Astellas (4503, #15, +51.8% EPS CONFIRMED), Shionogi (4507, #17). Health Care confirmed count tripled from 1 to 3.\n**Specialty Materials** \u2014 Mitsui Kinzoku (5706, #4, +49.7% EPS CONFIRMED), Resonac (4004, #7), JX Metals (5016). EPS revisions massive but price action lagging.\n**Telecom Acceleration** \u2014 KDDI (9433, Emerging +91.5), NTT (9432, Emerging +97.2), Hitachi (6501, Accelerating). The pre-breakout cluster is strengthening.",
+    synthesis: "TOPIX shifted to Range-Bound regime as 1M return improved to -1.4% from -3.6%. 16 confirmed leaders \u2014 up from 15. Sumitomo Electric displaced Fujikura at #1. Cable/power infrastructure dominates with 4 of the top 5 names all CONFIRMED. Marubeni graduated to New Leader. Health Care confirmed count tripled. Pre-breakout: KDDI (Emerging +91.5), NTT (Emerging +97.2), Tokio Marine (Emerging +79.4).",
+    daily: "**Nikkei 225 rose 1.7% to 53,300, TOPIX gained 1.1% on 3 Apr** as Hormuz protocol hopes reversed the prior session\u2019s losses. Japan traded on Good Friday while US and HK markets were closed.\n**Microsoft announced a \u00a51.6 trillion AI partnership in Japan,** lifting AI-linked names. Sakura Internet surged 20.2% to its daily limit. Furukawa Electric (5801, #5) gained 9.9% and Fujikura (5803, #3) rose 7.5%.\n**Cable infrastructure outperformed.** The top 5 in TOPIX includes 4 cable/power names (Sumitomo Electric #1, Kioxia #2, Fujikura #3, Furukawa #5), all CONFIRMED. This is the strongest cluster positioning in any market.\n**Marubeni (8002, #9) graduated to New Leader.** The first sogo shosha to reach New Leader status this cycle.\n**Regime shifted to Range-Bound** as 1M return improved from -3.6% to -1.4%. The pullback is moderating.\n**Net read:** The Hormuz protocol news and Microsoft AI partnership created a double tailwind. Cable infrastructure and pharma remain the highest-conviction clusters. The telecom acceleration (KDDI, NTT) is the top pre-breakout setup."
   },
   "KOSPI": {
-    sectors: "**Info Tech** \u2014 strongest at +6.7% 1M RS, 80% trend pass. Samsung Electro-Mechanics and Hanmi Semi recovering. But Samsung Electronics (MS 62, WATCH) is the elephant in the room.\n**Industrials** \u2014 +0.5% 1M RS, 55% trend pass. Defence cluster (Hanwha Systems #5, LS Electric #3, LIG Nex1 #4, Korea Aerospace #12) anchors the only functioning leadership. 3 New Leaders and 2 confirmed.\n**Financials** \u2014 -0.4% 1M RS, 33% trend pass. Mirae Asset (#1, +172.3% EPS CONFIRMED) is the sole financial anchor.\n**Consumer Discretionary** \u2014 -10.2%. Hyundai Motor on EXIT.\n**Energy** \u2014 -6.9%. HD Hyundai Fading on EXIT.",
-    themes: "**Defence/Infrastructure** \u2014 LS Electric (#3, New Leader), LIG Nex1 (#4, +41% 1M RS, New Leader), Hanwha Systems (#5, Existing Leader), Korea Aerospace (#12, CONFIRMED), Hyosung Heavy (#6, New Leader). The cluster has 3 New Leaders graduating simultaneously \u2014 the broadest defence leadership emergence in KOSPI.\n**Financials** \u2014 Mirae Asset (#1, +172.3% EPS CONFIRMED). KB Financial accelerating at +86.8. Shinhan Emerging.\n**Semiconductors** \u2014 Info Tech is the top sector by 1M RS (+6.7%) but only Samsung Electro-Mechanics is confirmed. SK Hynix off the top 20. Samsung Electronics on WATCH.\n**Samsung Life** (#7, +7.3% 1M RS) \u2014 insurance benefiting from higher rates.",
-    synthesis: "KOSPI in pullback (-6.9% 1M, improved from -16% last week). Only 3 confirmed names \u2014 the thinnest of any market. Defence cluster broadened dramatically: LS Electric, LIG Nex1, Hyosung Heavy all graduated to New Leader simultaneously. Mirae Asset remains the sole confirmed financial anchor. The semi recovery is price-led (Info Tech best sector) but lacks confirmations. The regime shifted from \u201cSharp Pullback in Strong Rally\u201d to \u201cPullback in Strong Uptrend\u201d \u2014 a constructive upgrade. Pre-breakout: KB Financial (+86.8 acceleration), Samsung Heavy (Accelerating +96.2), Samsung Biologics (+92.5).",
-    daily: "**KOSPI traded mixed on the 2 Apr session.** The morning selloff on Trump\u2019s war speech recovered after the Iran/Oman Hormuz protocol report. Korea\u2019s 68% Hormuz crude dependence keeps it whipsawing on every headline.\n**Defence surged again.** LIG Nex1 (#4, +41% 1M RS) and LS Electric (#3) both graduated to New Leader. Korea Aerospace (#12, CONFIRMED) held. Defence spending is structural, not just a war premium.\n**Financials stable.** Mirae Asset (#1, CONFIRMED) held. KB Financial accelerating. Trading volumes remain elevated.\n**Semis bounced.** Samsung Electro-Mechanics gained. Samsung SDI (#16, +14.1% 1M RS) is recovering on the EV battery narrative.\n**Net read:** The regime upgrade to \u201cPullback in Strong Uptrend\u201d is the most constructive KOSPI signal in weeks. Defence broadening (3 New Leaders) is the key development. The 3 confirmed names is still thin but the trajectory is improving."
+    sectors: "**Consumer Staples** \u2014 +4.2% 1M RS, 100% trend pass. KT\u0026G (033780, Accelerating +98.1). Single name, perfect breadth.\n**Information Technology** \u2014 +3.2% 1M RS, 80% trend pass. Samsung Electro-Mechanics (009150, #6, New Leader CONFIRMED) is the breakthrough. Samsung Electronics on WATCH.\n**Financials** \u2014 +0.6% 1M RS, 44% trend pass. Mirae Asset (006800, #2, +52% EPS CONFIRMED). Shinhan Financial (055550, Emerging +86.8).\n**Industrials** \u2014 -0.8% 1M RS, 50% trend pass. Three confirmed. LS Electric (010120, #1, MS 88.1, +7.3% EPS CONFIRMED) leads the entire index. Hyosung Heavy (298040, #4, +11.1% EPS CONFIRMED) also CONFIRMED.\n**Communication Services** \u2014 -2.1% 1M RS, 50% trend pass. SK Telecom (017670, #7) holding.\n**Health Care** \u2014 -3.5% 1M RS, 0% trend pass. No leadership.\n**Energy** \u2014 -4.3% 1M RS, 50% trend pass. One confirmed. HD Hyundai Fading.\n**Materials** \u2014 -3.0% 1M RS, 0% trend pass. No leadership.\n**Consumer Discretionary** \u2014 -8.4% 1M RS, 0% trend pass. Hyundai Motor Fading. Avoid.\n**Utilities** \u2014 -15.1% 1M RS, 0% trend pass. Weakest sector.",
+    themes: "**Defence/Electrical Infrastructure** \u2014 LS Electric (010120, #1, MS 88.1, +7.3% EPS CONFIRMED), Hyosung Heavy (298040, #4, +11.1% EPS CONFIRMED), LIG Nex1 (079550, #5, Existing Leader), Hyundai E\u0026C (000720, #3, Existing Leader). Both LS Electric and Hyosung Heavy are now CONFIRMED \u2014 the first time the defence cluster has double confirmation.\n**Samsung Electro-Mechanics** (009150, #6, +15.8% RS, +12.8% EPS, New Leader CONFIRMED) \u2014 the first tech name to reach confirmed leadership in KOSPI this cycle.\n**Mirae Asset** (006800, #2, +52% EPS CONFIRMED) \u2014 sole financial anchor. KB Financial (105560) and Shinhan (055550) still building.\n**Doosan Enerbility** (034020, #13, Accelerating +84.9) \u2014 nuclear/energy play worth watching.",
+    synthesis: "KOSPI in pullback (-3.0% 1M) within strong uptrend (+19.7% 3M). Confirmed count doubled from 3 to 6 \u2014 the sharpest improvement across all markets. LS Electric and Hyosung Heavy now both CONFIRMED. Samsung Electro-Mechanics is the first confirmed tech leader. The regime remains Pullback in Strong Uptrend. Pre-breakout: KT Corp (Emerging +90.6), Shinhan Financial (Emerging +86.8), Samsung Heavy (Accelerating +96.2).",
+    daily: "**KOSPI rose 0.67% to 5,415 on 3 Apr,** recovering from the 4.5% plunge on 2 Apr. Korea traded through Good Friday.\n**LS Electric (010120, #1) consolidated at the top** after graduating to New Leader. Both LS Electric (+7.3% EPS) and Hyosung Heavy (298040, +11.1% EPS) are now CONFIRMED \u2014 the defence/electrical cluster has its strongest fundamental backing yet.\n**Samsung Electro-Mechanics (009150, #6) gained** on the AI semiconductor demand narrative. This is the first tech name to reach confirmed New Leader in KOSPI.\n**Confirmed count doubled from 3 to 6** \u2014 the sharpest single-session improvement across all five markets. The signal structure is materially stronger than a week ago.\n**Net read:** The regime remains Pullback in Strong Uptrend (+19.7% 3M, +52.6% 6M). Defence broadening and tech confirmation are the key developments. Only caveat: the 1M return is still -3.0%, so near-term price action hasn\u2019t confirmed the improving signal structure yet."
   },
   "HSI": {
-    sectors: "**Health Care** \u2014 +11.5% 1M RS. Strongest sector in HSI. WuXi AppTec (#5), CSPC Pharma (#13, +46.2% EPS CONFIRMED), Hansoh (Emerging).\n**Industrials** \u2014 +5.3% 1M RS, 88% trend pass. Best breadth. CATL Emerging (+31.3%), JD Logistics Emerging (+34.3%).\n**Consumer Staples** \u2014 +3.2% 1M RS. WH Group (#3, Existing Leader).\n**Financials** \u2014 +2.3% 1M RS, 70% trend pass. BOC HK (#8, CONFIRMED), AIA (#10). HSBC Fading on EXIT.\n**Energy** \u2014 flat (0.0% 1M RS). PetroChina (#2, CONFIRMED) and CNOOC (#11, CONFIRMED) holding but no longer leading.\n**Consumer Discretionary** \u2014 +1.3% 1M RS. Geely (#6, New Leader, +57.1% 1M RS!) is the dramatic exception. Li Auto (Sector Rotation).\n**Communication Services and Info Tech** \u2014 both negative. Tech/internet still absent.",
-    themes: "**Hongqiao** (#1, Existing Leader, MS 86.5) \u2014 top-ranked name. Aluminum play.\n**PetroChina** (#2, +19.2% EPS CONFIRMED) and **CNOOC** (#11, +29.2% EPS CONFIRMED) \u2014 the energy pair. Still CONFIRMED but energy is no longer the top sector.\n**WuXi AppTec** (#5, Existing Leader) \u2014 pharma/CDMO theme is established.\n**Geely** (#6, +57.1% 1M RS, New Leader, Sector Rotation) \u2014 the most extreme momentum in any market globally. EV adoption thesis driven by $100+ oil. Li Auto also flagged as Sector Rotation.\n**BOC Hong Kong** (#8, Existing Leader CONFIRMED) \u2014 first HK bank to hold confirmed leader status.\n**EV/Logistics Emerging** \u2014 CATL (+31.3%), JD Logistics (+34.3%), BYD (+10.5%). Strongest price action outside energy.\n**CM Bank** Emerging at +98.6 acceleration \u2014 the strongest financial early signal.",
-    synthesis: "HSI in intermediate downtrend below 200DMA. 8 confirmed leaders \u2014 improved from 7. Health Care overtook Energy as the top sector (+11.5% vs flat). Geely at +57.1% 1M RS is the most extreme momentum name in any market globally \u2014 graduated to New Leader with Sector Rotation flag. The 2 Apr war-extension narrative benefits energy but the broader market is rotating toward pharma, financials, and EV. Capital allocation still favours US and Japan over HK.",
-    daily: "**Hang Seng traded mixed on the 2 Apr session.** The Trump war-extension speech triggered a morning selloff but Iran/Oman Hormuz protocol reports drove a recovery.\n**Geely exploded higher.** +57.1% 1M RS \u2014 the most dramatic move in any HSI name and any market we cover. The EV adoption thesis is accelerating as $100+ oil makes EV cost advantages more compelling. Li Auto also flagged as Sector Rotation.\n**Energy paused.** PetroChina and CNOOC held but energy is no longer the top sector. Health Care has overtaken it.\n**CATL and JD Logistics** \u2014 both Emerging at 30%+ 1M RS \u2014 continued to build. The industrial/logistics cluster is generating strong price action.\n**BOC Hong Kong** (#8, CONFIRMED) held its leadership position.\n**Net read:** The session confirmed the rotation: Health Care and EV/logistics are taking over from Energy as the active themes. Geely\u2019s Sector Rotation flag suggests the EV trade is transitioning from momentum to structural leadership."
+    sectors: "**Health Care** \u2014 +9.4% 1M RS, 50% trend pass. Two confirmed names. WuXi AppTec (2359, #4, New Leader CONFIRMED) graduated. Hansoh Pharma (3692, Emerging +95.9).\n**Consumer Staples** \u2014 +4.3% 1M RS, 20% trend pass. WH Group (288, #2, Existing Leader CONFIRMED). One confirmed.\n**Industrials** \u2014 +3.4% 1M RS, 88% trend pass. Best breadth in the index. No confirmed names.\n**Financials** \u2014 +2.8% 1M RS, 70% trend pass. BOC Hong Kong (2388, #9, CONFIRMED). AIA (1299, #8, New Leader). Two confirmed.\n**Energy** \u2014 +1.5% 1M RS, 75% trend pass. PetroChina (857, #1, +12.4% EPS CONFIRMED) leads the index. Two confirmed.\n**Utilities** \u2014 +0.9% 1M RS, 100% trend pass. Perfect breadth. Power Assets (6, #7, Existing Leader).\n**Consumer Discretionary** \u2014 +0.6% 1M RS, 13% trend pass. Geely (175, #5, +48.1% RS, New Leader UNCONFIRMED) \u2014 still the most extreme momentum name globally. Three Sector Rotation signals.\n**Real Estate** \u2014 -4.8% 1M RS, 43% trend pass. SHK Properties (16, #3, Existing Leader). One confirmed.\n**Information Technology** \u2014 -4.9% 1M RS, 0% trend pass. Weakest sector. No leaders.\n**Communication Services** \u2014 -6.3% 1M RS, 14% trend pass. China Mobile (941, Emerging +94.6). Tech/internet absent.\n**Materials** \u2014 -9.8% 1M RS, 33% trend pass. China Hongqiao (1378, #6, Existing Leader CONFIRMED).",
+    themes: "**PetroChina** (857, #1, +12.4% EPS CONFIRMED) \u2014 top-ranked name in HSI. Energy still leads on rank despite Health Care being the top sector on 1M RS.\n**WH Group** (288, #2, Existing Leader CONFIRMED) \u2014 consumer staples anchor. Steady.\n**WuXi AppTec** (2359, #4, New Leader CONFIRMED) \u2014 graduated to New Leader with confirmation. The pharma/CDMO theme strengthens.\n**Geely** (175, #5, +48.1% RS, New Leader UNCONFIRMED) \u2014 the most extreme momentum in any market globally. EV adoption thesis accelerating on $100+ oil.\n**AIA** (1299, #8, New Leader) \u2014 graduated to New Leader. First insurance name to reach leadership in HSI.\n**EV/Logistics Emerging** \u2014 BYD (1211, Emerging +82.4), Hansoh Pharma (3692, Emerging +95.9), Nongfu Spring (9633, Emerging +91.9). Broadening beyond energy.\n**China Mobile** (941, Emerging +94.6) \u2014 highest acceleration in HSI.",
+    synthesis: "HSI in intermediate downtrend below 200DMA. 9 confirmed leaders \u2014 up from 8. WuXi AppTec graduated to New Leader CONFIRMED. AIA also reached New Leader. Health Care (+9.4% RS) remains the top sector. Geely at +48.1% RS is still the most extreme momentum globally. The rotation from energy to pharma/financials/EV continues.",
+    daily: "**Hang Seng fell 0.70% to 25,117 on 2 Apr** (HK closed Good Friday 3 Apr). The morning selloff on Trump\u2019s war speech recovered partially on the Iran/Oman Hormuz protocol report.\n**WuXi AppTec (2359, #4) graduated to New Leader CONFIRMED** \u2014 the cleanest pharma entry in HSI. Health Care overtook Energy as the top sector on 1M RS (+9.4% vs +1.5%).\n**Geely (175, #5) held** at +48.1% RS. Li Auto flagged as Sector Rotation alongside Midea Group. The EV adoption thesis persists.\n**AIA (1299, #8) reached New Leader** \u2014 the first insurance name in HSI leadership.\n**PetroChina (857, #1) remains the top-ranked name** despite energy no longer being the top sector. Confirmed count rose to 9.\n**Net read:** The rotation is clear: Health Care, Financials, and EV/consumer are overtaking Energy as the active leadership themes. Nine confirmed leaders and three New Leader graduations in one cycle suggest the signal structure is strengthening even as the index trades below its 200DMA."
   },
   "CSI300": {
-    sectors: "**Health Care** \u2014 strongest at +4.7% 1M RS. WuXi AppTec (MS 77.5, CONFIRMED) leads.\n**Utilities** \u2014 +4.7% 1M RS, 55% trend pass. CGN Power (+149.5% EPS CONFIRMED).\n**Consumer Staples** \u2014 +3.2% 1M RS. Inflecting.\n**Financials \u2014 inflecting.** +1.7% 1M RS with negative 3M (-3.1%). 9 Sector Rotation signals from state banks. The broadest rotation in CSI 300.\n**Energy** \u2014 flat (0.0% 1M RS) but 89% trend pass. China Merchants Energy (#4, CONFIRMED) and COSCO Shipping (#10, CONFIRMED). No longer leading on 1M.\n**Industrials** \u2014 -0.9% 1M RS. Electrification cluster (Dongfang #3, Zhongtian #5, Sieyuan #11) holds top ranks. 5 confirmed.\n**Info Tech** \u2014 -2.7% 1M RS, 15% trend pass. WUS Printed (#2, New Leader, +16% EPS CONFIRMED) and Eoptolink (#16, New Leader CONFIRMED) are the new additions. But GigaDevice, Range Intelligence fading.\n**Real Estate** \u2014 -15.5% 1M RS. Worst sector by far.",
-    themes: "**PCB/Connectivity** \u2014 Suzhou TFC (#1, MS 92.1), WUS Printed (#2, +16% EPS CONFIRMED), Zhongji Innolight (#14, +14.9% EPS CONFIRMED), Eoptolink (#16, +3.1% EPS CONFIRMED), Suzhou Dongshan (#9). The data infrastructure cluster has surged to the top of CSI 300 \u2014 5 names in the top 20.\n**Electrical Infrastructure** \u2014 Dongfang Electric (#3), Zhongtian Tech (#5, +10.3% EPS CONFIRMED), Sieyuan Electric (#11, +23.8% EPS CONFIRMED), Ningbo Deye (#8). The electrification theme persists.\n**Specialty Materials** \u2014 Qinghai Salt Lake (#6), Ganfeng Lithium (#17), Ningxia Baofeng (#12), China Jushi (#7, +20% EPS). Deep cluster.\n**Shipping/Energy** \u2014 China Merchants Energy (#4, +43.8% EPS CONFIRMED), COSCO Shipping (#10). Both Existing Leaders.\n**Financials Rotation** \u2014 9 Sector Rotation signals: CITIC, CCB, Bank of China, Shanghai Rural, Bank of Nanjing, Yunnan Baiyao, Bank of Beijing, Zheshang Bank, Guangdong Haid. The broadest we\u2019ve recorded.\n**CGN Power** (+149.5% EPS CONFIRMED) \u2014 most extreme single-name EPS. Nuclear power benefiting from the energy crisis.",
-    synthesis: "CSI 300 in intermediate downtrend \u2014 now below 200DMA for the first time (bench 4,450 vs MA 4,452). 21 confirmed leaders. The key shift: PCB/connectivity names (Suzhou TFC, WUS Printed, Zhongji, Eoptolink) have surged to dominate the top of the index \u2014 the data infrastructure theme is now the primary leadership in China, not electrification. Financials rotation (9 Sector Rotation signals) is the broadest we\u2019ve recorded. Health Care overtook Energy as the top sector on 1M RS. Pre-breakout: ICBC (Emerging +92), Agricultural Bank (Emerging +100), BYD (Emerging +71.4), Sichuan Biokin (+84.5 acceleration).",
-    daily: "**CSI 300 fell as Trump\u2019s war-extension speech reversed the peace trade.** The index slipped below its 200DMA (4,450 vs 4,452) \u2014 the first time this cycle. The Iran/Oman protocol report triggered a partial recovery.\n**PCB/connectivity surged to the top.** Suzhou TFC (#1), WUS Printed (#2, New Leader CONFIRMED), Zhongji Innolight (#14) all held or gained. The data infrastructure theme is now the primary leadership cluster in CSI 300.\n**Energy paused.** China Merchants Energy and COSCO Shipping held but energy is flat on 1M RS. The sector is no longer leading.\n**Financials rotation broadened.** 9 Sector Rotation signals from state banks. CITIC Bank and Bank of China are the most prominent names. Agricultural Bank Emerging at +100 acceleration.\n**Tech mixed.** GigaDevice and Range Intelligence still fading. But WUS Printed and Eoptolink \u2014 both New Leaders CONFIRMED \u2014 are the new tech leadership.\n**Net read:** The PCB/data infrastructure theme overtaking electrification at the top of CSI 300 is the most significant structural shift this week. The 200DMA breach is a technical deterioration but the confirmed leader count (21) remains deep."
+    sectors: "**Energy** \u2014 +5.5% 1M RS, 89% trend pass. Three confirmed. China Merchants Energy (601872, #3, +47.7% EPS CONFIRMED) leads.\n**Health Care** \u2014 +4.2% 1M RS, 25% trend pass. One confirmed. Sichuan Biokin (688506, Emerging +84.5).\n**Utilities** \u2014 +2.6% 1M RS, 55% trend pass. One confirmed. CGN Power (+149.5% EPS CONFIRMED).\n**Consumer Staples** \u2014 +2.2% 1M RS, 21% trend pass. Inflecting. Wuliangye (000858, Accelerating +80.8), Inner Mongolia Yili (600887, Accelerating +99.5).\n**Financials** \u2014 +2.2% 1M RS, 26% trend pass. Two confirmed. Broadest sector with 42 names. Multiple Emerging and Sector Rotation signals from state banks.\n**Consumer Discretionary** \u2014 -0.2% 1M RS, 8% trend pass. BYD (002594, Emerging +70.9).\n**Industrials** \u2014 -2.7% 1M RS, 28% trend pass. Three confirmed. Electrification holds top ranks: Zhongtian Tech (600522, #6, +0.3% EPS), Ningbo Deye (605117, #5), Dongfang Electric (600875).\n**Information Technology** \u2014 -2.9% 1M RS, 15% trend pass. Four confirmed. WUS Printed (002463, #1, MS 91.8, New Leader CONFIRMED) leads CSI 300. Suzhou TFC (300394, #2, UNCONFIRMED). Eoptolink (300502, #9, New Leader), Zhongji Innolight (300308, #10, New Leader CONFIRMED).\n**Communication Services** \u2014 -3.0% 1M RS, 0% trend pass. No leadership.\n**Materials** \u2014 -3.9% 1M RS, 31% trend pass. Eight confirmed. China Jushi (600176, #7, +16.8% EPS CONFIRMED), Ningxia Baofeng (600989, #8, +8.6% EPS CONFIRMED).\n**Real Estate** \u2014 -12.7% 1M RS, 0% trend pass. Weakest sector. No leadership.",
+    themes: "**PCB/Data Infrastructure** \u2014 WUS Printed (002463, #1, MS 91.8, +2.8% EPS CONFIRMED), Suzhou TFC (300394, #2, UNCONFIRMED), Suzhou Dongshan (002384, #4), Eoptolink (300502, #9, New Leader), Zhongji Innolight (300308, #10, +4.2% EPS CONFIRMED). Five names in the top 10. The primary leadership cluster in CSI 300.\n**Electrical Infrastructure** \u2014 Zhongtian Tech (600522, #6), Ningbo Deye (605117, #5), Sieyuan Electric (002028). Electrification persists but slipped behind PCB/data.\n**Shipping/Energy** \u2014 China Merchants Energy (601872, #3, +47.7% EPS CONFIRMED), COSCO Shipping (600026). Both Existing Leaders.\n**Specialty Materials** \u2014 China Jushi (600176, #7, +16.8% EPS CONFIRMED), Ningxia Baofeng (600989, #8, +8.6% EPS CONFIRMED), Qinghai Salt Lake, Ganfeng Lithium (+23.4% RS). Deep cluster with 8 confirmed.\n**Financials Emerging** \u2014 Agricultural Bank (601288, Emerging +100), China Merchants Bank (600036, Emerging +98.6), Postal Savings (601658, Emerging +94.4). The state bank rotation continues.\n**CGN Power** (+149.5% EPS CONFIRMED) \u2014 nuclear power thesis on the energy crisis.",
+    synthesis: "CSI 300 in intermediate downtrend below 200DMA. 22 confirmed leaders \u2014 up from 21. PCB/data infrastructure (WUS Printed #1, Suzhou TFC #2, Eoptolink, Zhongji) dominates the top of the index. Energy regained the top sector on 1M RS as the war premium returned. Materials has 8 confirmed names \u2014 the deepest sector pool. Financials Emerging cluster (Agricultural Bank +100, China Merchants Bank +98.6) is the broadest pre-breakout setup.",
+    daily: "**CSI 300 fell 0.9% on the latest session** as the war-extension narrative and pharma tariff threats weighed. The index remains marginally below its 200DMA.\n**PCB/data infrastructure held the top.** WUS Printed (002463, #1, New Leader CONFIRMED) and Suzhou TFC (300394, #2) were stable. Eoptolink (300502, #9) and Zhongji Innolight (300308, #10) both graduated to New Leader \u2014 the data infrastructure theme continues to broaden.\n**Energy regained the top sector** on 1M RS (+5.5%) as the Hormuz war premium returned. China Merchants Energy (601872, #3, +47.7% EPS CONFIRMED) held.\n**Financials Emerging cluster strengthened.** Agricultural Bank (601288, +100 acceleration), China Merchants Bank (600036, +98.6), Postal Savings Bank (601658, +94.4) all building. The state bank rotation is the broadest pre-breakout signal in CSI 300.\n**Materials confirmed count rose to 8** \u2014 the deepest sector pool, led by China Jushi and Ningxia Baofeng.\n**Net read:** The signal structure improved: 22 confirmed, PCB/data broadening, financials rotation building. The 200DMA overhang is the constraint. A break above 4,452 would be the technical catalyst."
   }
 };
 
@@ -211,7 +211,7 @@ function computeEngine(rawData, bench, cfg) {
       tr: s.tr, lf: s.lf, cf: s.cf, es: s.es, ac: s.ac, ex: s.ex,
     })),
     regime,
-    bench: { "1M": Math.round(bench.r1m * 10) / 10, "3M": Math.round(bench.r3m * 10) / 10, "6M": Math.round(bench.r6m * 10) / 10, "1Y": Math.round(bench.r1y * 10) / 10 },
+    bench: { "1D": bench.r1d != null ? Math.round(bench.r1d * 10) / 10 : null, "1M": Math.round(bench.r1m * 10) / 10, "3M": Math.round(bench.r3m * 10) / 10, "6M": Math.round(bench.r6m * 10) / 10, "1Y": Math.round(bench.r1y * 10) / 10 },
   };
 }
 
@@ -257,416 +257,328 @@ function getFiltered(engine) {
   return d;
 }
 
-// --- HTML Helpers ------------------------------------------------------------
 
-function esc(s) {
-  if (s == null) return "";
-  return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-}
+// --- HTML Helpers -----------------------------------------------------------
 
+function esc(s) { if (s == null) return ""; return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function fmtMc(v) { if (v == null) return "\u2014"; if (v >= 1000) return (v/1000).toFixed(1)+"T"; return v.toFixed(0)+"B"; }
 function pctHtml(v, bold) {
-  if (v == null) return '<span class="text-slate-300">\u2014</span>';
-  const c = v > 0 ? "text-emerald-700" : v < 0 ? "text-red-700" : "text-slate-500";
+  if (v == null) return '<span class="text-n-300">\u2014</span>';
+  const c = v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-n-400";
   const w = bold && Math.abs(v) > 5 ? " font-semibold" : "";
-  return `<span class="${c}${w}">${v > 0 ? "+" : ""}${v.toFixed(1)}%</span>`;
+  return '<span class="font-mono '+c+w+'">'+(v > 0?"+":"")+v.toFixed(1)+'%</span>';
 }
-
-function scoreHtml(v) {
-  if (v == null) return '<span class="text-slate-300">\u2014</span>';
-  const bg = v >= 85 ? "bg-emerald-100 text-emerald-800" : v >= 70 ? "bg-lime-100 text-lime-800" : v <= 25 ? "bg-red-100 text-red-800" : "text-slate-700";
-  return `<span class="px-1 rounded text-xs font-mono ${bg}">${v.toFixed(1)}</span>`;
+function scoreHtml(v) { if (v == null) return '<span class="text-n-300">\u2014</span>'; return '<span class="font-mono text-n-700">'+v.toFixed(1)+'</span>'; }
+function badgeHtml(label) {
+  if (!label || label === "\u2014") return "";
+  var map = {"NEW LEADER":["NEW","badge-green"],"EXISTING LEADER":["EXISTING","badge-blue"],"FADING LEADER":["FADING","badge-amber"],"CONFIRMED":["CONFIRMED","badge-green"],"UNCONFIRMED":["UNCONF","badge-red"],"REVISION LEADER":["REV LDR","badge-violet"],"EXIT":["EXIT","badge-red"],"WATCH":["WATCH","badge-amber"],"EMERGING":["EMERGING","badge-sky"],"ACCELERATING":["ACCEL","badge-blue"],"SECTOR ROTATION":["SECT ROT","badge-violet"]};
+  var m = map[label]; if (!m) return "";
+  return '<span class="badge '+m[1]+'">'+m[0]+'</span>';
 }
+function boldTextHtml(s) { return s ? s.replace(/\n/g,"<br>").replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>") : ""; }
+function sortArrow(col) { return state.sCol === col ? (state.sDir === "desc" ? " \u25BC" : " \u25B2") : ""; }
 
-function badgeHtml(text) {
-  if (!text || text === "\u2014" || text === "HOLD") return '<span class="text-slate-300 text-xs">\u2014</span>';
-  const styles = {
-    "NEW LEADER": "bg-emerald-100 text-emerald-800 border-emerald-200",
-    "EXISTING LEADER": "bg-blue-100 text-blue-800 border-blue-200",
-    "FADING LEADER": "bg-amber-100 text-amber-800 border-amber-200",
-    "CONFIRMED": "bg-emerald-100 text-emerald-800 border-emerald-200",
-    "UNCONFIRMED": "bg-red-100 text-red-800 border-red-200",
-    "REVISION LEADER": "bg-violet-100 text-violet-800 border-violet-200",
-    "EMERGING": "bg-rose-100 text-rose-800 border-rose-200",
-    "ACCELERATING": "bg-violet-100 text-violet-800 border-violet-200",
-    "SECTOR ROTATION": "bg-amber-100 text-amber-800 border-amber-200",
-    "EXIT": "bg-red-200 text-red-900 border-red-300",
-    "WATCH": "bg-amber-200 text-amber-900 border-amber-300",
-    "HOLD": "bg-slate-50 text-slate-500 border-slate-200",
-  };
-  return `<span class="text-xs px-1.5 py-0.5 rounded border font-medium ${styles[text] || "bg-slate-100"}">${esc(text)}</span>`;
-}
-
-function boldTextHtml(text) {
-  if (!text) return "";
-  return text.split("\n").map(para =>
-    '<p class="mb-2 last:mb-0">' + esc(para).replace(/\*\*([^*]+)\*\*/g, '<strong class="text-slate-900">$1</strong>') + '</p>'
-  ).join("");
-}
-
-function sortArrow(col) {
-  return state.sCol === col ? (state.sDir === "desc" ? " \u2193" : " \u2191") : "";
-}
-
-// --- Render Functions --------------------------------------------------------
-
-function renderMarketTabs() {
-  const el = document.getElementById("market-tabs");
-  el.innerHTML = Object.entries(MARKET_LABELS).map(([k, v]) =>
-    `<button data-mkt="${k}" class="px-3 py-1.5 text-sm font-medium rounded-md ${state.mkt === k ? "bg-slate-800 text-white shadow-sm" : "text-slate-600 hover:bg-slate-200"}">${esc(v)}</button>`
-  ).join("");
-}
+// --- Render -----------------------------------------------------------------
 
 function renderTabButtons() {
-  const s = document.getElementById("tab-screener");
-  const c = document.getElementById("tab-config");
-  const g = document.getElementById("tab-guide");
-  s.className = "px-3 py-1.5 text-sm font-medium rounded-md " + (state.tab === "screener" ? "bg-slate-800 text-white" : "text-slate-500 hover:bg-slate-200");
-  c.className = "px-3 py-1.5 text-sm font-medium rounded-md " + (state.tab === "config" ? "bg-slate-800 text-white" : "text-slate-500 hover:bg-slate-200");
-  g.className = "px-3 py-1.5 text-sm font-medium rounded-md " + (state.tab === "guide" ? "bg-slate-800 text-white" : "text-slate-500 hover:bg-slate-200");
-  document.getElementById("screener-panel").classList.toggle("hidden", state.tab !== "screener");
+  document.querySelectorAll("#nav-tabs .tab-btn").forEach(function(btn) {
+    var id = btn.id.replace("tab-","");
+    if (id === state.tab) { btn.classList.add("active"); } else { btn.classList.remove("active"); }
+  });
   document.getElementById("config-panel").classList.toggle("hidden", state.tab !== "config");
   document.getElementById("guide-panel").classList.toggle("hidden", state.tab !== "guide");
+  document.getElementById("screener-panel").classList.toggle("hidden", state.tab !== "screener");
 }
 
 function renderRegime(engine) {
-  const el = document.getElementById("regime-bar");
-  let html = `<div><div class="text-xs text-slate-500 uppercase tracking-wide">Regime</div><div class="text-sm font-semibold text-slate-800">${esc(engine.regime)}</div></div>`;
-  html += '<div class="h-8 w-px bg-slate-200"></div>';
-  for (const [k, v] of Object.entries(engine.bench)) {
-    const c = v >= 0 ? "text-emerald-700" : "text-red-700";
-    html += `<div class="text-center"><div class="text-xs text-slate-400">${k}</div><div class="text-sm font-mono font-semibold ${c}">${v >= 0 ? "+" : ""}${v.toFixed(1)}%</div></div>`;
+  var el = document.getElementById("regime-bar");
+  var html = '<div><div class="cmt-label" style="margin-bottom:2px">Regime</div><div class="text-[14px] font-semibold text-n-900">'+esc(engine.regime)+'</div></div>';
+  var entries = Object.entries(engine.bench);
+  for (var i = 0; i < entries.length; i++) {
+    var k = entries[i][0], v = entries[i][1];
+    if (v == null) { html += '<div class="text-center"><div class="text-[10px] text-n-400 font-medium">'+k+'</div><div class="text-[13px] font-mono text-n-300">\u2014</div></div>'; }
+    else { var c = v >= 0 ? "text-emerald-600" : "text-red-500"; html += '<div class="text-center"><div class="text-[10px] text-n-400 font-medium">'+k+'</div><div class="text-[13px] font-mono font-semibold '+c+'">'+(v>=0?"+":"")+v.toFixed(1)+'%</div></div>'; }
   }
+  html += '<div class="flex-1"></div>';
+  html += '<button id="toggle-commentary" class="text-[11px] text-n-400 hover:text-n-700 transition-colors">'+(state.showC ? "Hide commentary" : "Show commentary")+'</button>';
   el.innerHTML = html;
 }
 
-function renderKPIs(engine) {
-  const d = engine.stocks;
-  const st = {
-    n: d.length,
-    nw: d.filter(r => r.lf === "NEW LEADER").length,
-    ex: d.filter(r => r.lf === "EXISTING LEADER").length,
-    fd: d.filter(r => r.lf === "FADING LEADER").length,
-    cf: d.filter(r => r.cf === "CONFIRMED").length,
-    xt: d.filter(r => r.ex === "EXIT").length,
-    wt: d.filter(r => r.ex === "WATCH").length,
-  };
-  let html = `<span class="text-slate-400 text-xs">Universe</span><span class="font-bold text-slate-800">${st.n}</span><div class="h-4 w-px bg-slate-200"></div>`;
-  html += `<span class="text-xs text-emerald-600">New</span><span class="font-bold text-emerald-700">${st.nw}</span>`;
-  html += `<span class="text-xs text-blue-600">Existing</span><span class="font-bold text-blue-700">${st.ex}</span>`;
-  html += `<span class="text-xs text-amber-600">Fading</span><span class="font-bold text-amber-700">${st.fd}</span><div class="h-4 w-px bg-slate-200"></div>`;
-  html += `<span class="text-xs text-emerald-600">Confirmed</span><span class="font-bold text-emerald-700">${st.cf}</span>`;
-  if (st.xt > 0) html += `<div class="h-4 w-px bg-slate-200"></div><span class="text-xs text-red-600">EXIT</span><span class="font-bold text-red-700">${st.xt}</span>`;
-  if (st.wt > 0) html += `<span class="text-xs text-amber-600">WATCH</span><span class="font-bold text-amber-700">${st.wt}</span>`;
-  html += '<div class="flex-1"></div>';
-  html += `<button id="toggle-commentary" class="text-xs text-slate-500 hover:text-slate-800 px-2 py-1 rounded border border-slate-200">${state.showC ? "Hide" : "Show"} Commentary</button>`;
-  document.getElementById("kpi-strip").innerHTML = html;
+function renderRegimeStrip() {
+  var el = document.getElementById("regime-strip");
+  if (!el) return;
+  var mkts = ["CSI300","HSI","KOSPI","R1000","TOPIX"];
+  var html = '<div class="flex gap-4 overflow-x-auto">';
+  for (var mi = 0; mi < mkts.length; mi++) {
+    var mkt = mkts[mi];
+    var raw = RAW[mkt]; if (!raw) continue;
+    var eng = computeEngine(raw.data, raw.bench, state.cfg);
+    var nw = 0, fd = 0, cf = 0;
+    for (var si = 0; si < eng.stocks.length; si++) { if (eng.stocks[si].lf==="NEW LEADER") nw++; if (eng.stocks[si].lf==="FADING LEADER") fd++; if (eng.stocks[si].cf==="CONFIRMED") cf++; }
+    var delta = nw - fd;
+    var isSel = mkt === state.mkt;
+    var rawMap = {}; for (var di = 0; di < raw.data.length; di++) { if (raw.data[di].t) rawMap[raw.data[di].t] = raw.data[di]; }
+    var a50 = 0, a200 = 0, tot = eng.stocks.length;
+    for (var si2 = 0; si2 < eng.stocks.length; si2++) { var rr = rawMap[eng.stocks[si2].t]; if (rr && rr.px != null && rr.ma50 != null && rr.px > rr.ma50) a50++; if (rr && rr.px != null && rr.ma200 != null && rr.px > rr.ma200) a200++; }
+    var pct50 = tot > 0 ? (a50/tot)*100 : 0, pct200 = tot > 0 ? (a200/tot)*100 : 0;
+    var regCol = "bg-red-400";
+    if (eng.regime.indexOf("Strong Uptrend") >= 0 || eng.regime.indexOf("Rallying") >= 0) regCol = "bg-emerald-400";
+    else if (eng.regime.indexOf("Uptrend") >= 0 || eng.regime.indexOf("Strong Rally") >= 0) regCol = "bg-emerald-400";
+    else if (eng.regime.indexOf("Pullback") >= 0) regCol = "bg-amber-400";
+    var deltaCol = delta > 0 ? "text-emerald-600" : delta < 0 ? "text-red-500" : "text-n-400";
+    var deltaArrow = delta > 0 ? "\u25B2" : delta < 0 ? "\u25BC" : "";
+    var sel = isSel ? "border border-n-300 bg-n-50 rounded-lg px-3" : "border border-n-100 rounded-lg px-3 hover:border-n-200 hover:bg-n-50";
+
+    html += '<button data-regime-mkt="'+esc(mkt)+'" class="flex-shrink-0 py-2 '+sel+' cursor-pointer transition-all text-left" style="min-width:180px">';
+    html += '<div class="flex items-center justify-between mb-1"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full '+regCol+'"></span><span class="text-[12px] font-semibold text-n-900">'+esc(MARKET_LABELS[mkt])+'</span></div>';
+    html += '<div class="flex items-center gap-1"><span class="text-[11px] font-bold text-n-800 font-mono">'+cf+'</span><span class="text-[10px] text-n-400 font-mono">/'+tot+'</span><span class="text-[9px] font-bold '+deltaCol+'">'+deltaArrow+Math.abs(delta)+'</span></div></div>';
+    html += '<div class="text-[9px] text-n-400 uppercase tracking-[0.06em] mb-0.5">Breadth</div>';
+    // >50D bar
+    var col50 = pct50>=60?"bg-emerald-400":pct50>=40?"bg-amber-400":"bg-red-400";
+    var tc50 = pct50>=60?"text-emerald-600":pct50>=40?"text-amber-600":"text-red-500";
+    html += '<div class="flex items-center gap-1.5"><span class="text-[9px] text-n-400 w-7 text-right">>50D</span><div class="bar-track" style="min-width:50px"><div class="bar-fill '+col50+'" style="width:'+pct50+'%"></div></div><span class="text-[9px] font-mono font-medium '+tc50+' w-7 text-right">'+pct50.toFixed(0)+'%</span></div>';
+    // >200D bar
+    var col200 = pct200>=60?"bg-emerald-400":pct200>=40?"bg-amber-400":"bg-red-400";
+    var tc200 = pct200>=60?"text-emerald-600":pct200>=40?"text-amber-600":"text-red-500";
+    html += '<div class="flex items-center gap-1.5"><span class="text-[9px] text-n-400 w-7 text-right">>200D</span><div class="bar-track" style="min-width:50px"><div class="bar-fill '+col200+'" style="width:'+pct200+'%"></div></div><span class="text-[9px] font-mono font-medium '+tc200+' w-7 text-right">'+pct200.toFixed(0)+'%</span></div>';
+    html += '</button>';
+  }
+  html += '</div>';
+  el.innerHTML = html;
 }
+
+// --- Sector Heatmap ---------------------------------------------------------
+
+function parseSectorCommentary(cmtText) {
+  if (!cmtText) return {};
+  var map = {};
+  var chunks = cmtText.split(/\n\*\*/);
+  for (var i = 0; i < chunks.length; i++) {
+    var text = i === 0 ? chunks[i] : "**" + chunks[i];
+    var m = text.match(/^\*\*([^*]+)\*\*/); if (!m) continue;
+    var label = m[1].trim().replace(/\s*\u2014.*$/, "");
+    var gicsMap = {"Energy":"Energy","Info Tech":"Information Technology","Information Technology":"Information Technology","Utilities":"Utilities","Financials":"Financials","Materials":"Materials","Health Care":"Health Care","Industrials":"Industrials","Real Estate":"Real Estate","Consumer Discretionary":"Consumer Discretionary","Consumer Disc":"Consumer Discretionary","Consumer Staples":"Consumer Staples","Communication Services":"Communication Services","Comm Services":"Communication Services","Communication Services and Info Tech":null,"Communication Services and Information Technology":null};
+    var gics = gicsMap[label];
+    if (gics === undefined) { var all = ["Energy","Materials","Industrials","Consumer Discretionary","Consumer Staples","Health Care","Financials","Information Technology","Communication Services","Utilities","Real Estate"]; for (var j = 0; j < all.length; j++) { if (all[j].toLowerCase().indexOf(label.toLowerCase().substring(0,8)) === 0 || label.toLowerCase().indexOf(all[j].toLowerCase().substring(0,8)) === 0) { gics = all[j]; break; } } }
+    if (gics) { map[gics] = text.replace(/^\*\*[^*]+\*\*\s*[\u2014\-]\s*/, "").trim(); }
+  }
+  return map;
+}
+
+var _sectorSortOrder = [];
+
+function renderSectorHeatmap() {
+  var el = document.getElementById("sector-heatmap");
+  if (!el || !engineCache) { if (el) el.innerHTML = ""; return; }
+  var stocks = engineCache.stocks;
+  var sectors = {};
+  for (var i = 0; i < stocks.length; i++) {
+    var s = stocks[i]; if (!s.s) continue;
+    if (!sectors[s.s]) sectors[s.s] = {n:0,rs1m:[],rs3m:[],above50:0,conf:0};
+    var sec = sectors[s.s]; sec.n++; sec.rs1m.push(s.rs1m); sec.rs3m.push(s.rs3m);
+    if (s.tr) sec.above50++; if (s.cf === "CONFIRMED") sec.conf++;
+  }
+  var rows = [];
+  var entries = Object.entries(sectors);
+  for (var i2 = 0; i2 < entries.length; i2++) {
+    var name = entries[i2][0], d = entries[i2][1];
+    rows.push({name:name, n:d.n, rs1m:d.rs1m.reduce(function(a,b){return a+b;},0)/d.n, rs3m:d.rs3m.reduce(function(a,b){return a+b;},0)/d.n, trend:(d.above50/d.n)*100, conf:d.conf});
+  }
+  if (!state._hmSort) state._hmSort = {col:"rs1m",dir:"desc"};
+  var sc = state._hmSort;
+  rows.sort(function(a,b) { var va=a[sc.col],vb=b[sc.col]; if(va==null)va=-999;if(vb==null)vb=-999; if(typeof va==="string")return sc.dir==="asc"?va.localeCompare(vb):vb.localeCompare(va); return sc.dir==="desc"?vb-va:va-vb; });
+  var maxRs = 5, maxRs3 = 5;
+  for (var i3 = 0; i3 < rows.length; i3++) { if (Math.abs(rows[i3].rs1m) > maxRs) maxRs = Math.abs(rows[i3].rs1m); if (Math.abs(rows[i3].rs3m) > maxRs3) maxRs3 = Math.abs(rows[i3].rs3m); }
+  var activeSector = state.fl.sector !== "All" ? state.fl.sector : null;
+  _sectorSortOrder = rows.map(function(r){return r.name;});
+  var cmt = COMMENTARY[state.mkt] || {};
+  var sectorCmt = state.showC ? parseSectorCommentary(cmt.sectors) : {};
+  var showCmt = state.showC;
+
+  function sHdr(label,col,align) { var arrow = sc.col===col?(sc.dir==="desc"?" \u25BC":" \u25B2"):""; return '<th data-hm-sort="'+col+'" class="'+(align||"text-left")+'">'+label+arrow+'</th>'; }
+
+  var html = '<table class="hm-table">';
+  if (showCmt) { html += '<colgroup><col style="width:18%"><col style="width:10%"><col style="width:10%"><col style="width:10%"><col style="width:2%"><col style="width:50%"></colgroup>'; }
+  else { html += '<colgroup><col style="width:22%"><col style="width:24%"><col style="width:24%"><col style="width:24%"><col style="width:6%"></colgroup>'; }
+  html += '<thead><tr>';
+  html += sHdr("Sector","name","text-left");
+  html += sHdr("1M RS","rs1m","text-left");
+  html += sHdr("3M RS","rs3m","text-left");
+  html += sHdr("Trend","trend","text-left");
+  html += '<th></th>';
+  if (showCmt) html += '<th class="text-left" style="border-left:1px solid #e5e5e5">Commentary</th>';
+  html += '</tr></thead><tbody>';
+
+  for (var ri = 0; ri < rows.length; ri++) {
+    var r = rows[ri];
+    var isActive = activeSector === r.name;
+    var inflect = r.rs1m > 0 && r.rs3m < 0;
+    var rsPct = Math.min(Math.abs(r.rs1m)/maxRs*50,50);
+    var rsPos = r.rs1m >= 0;
+    var rsCol = rsPos ? "bg-emerald-400" : "bg-red-400";
+    var rsLeft = rsPos ? "50%" : (50-rsPct)+"%";
+    var rs3Pct = Math.min(Math.abs(r.rs3m)/maxRs3*50,50);
+    var rs3Pos = r.rs3m >= 0;
+    var rs3Col = rs3Pos ? "bg-emerald-400" : "bg-red-400";
+    var rs3Left = rs3Pos ? "50%" : (50-rs3Pct)+"%";
+    var tPct = r.trend;
+    var tCol = tPct >= 60 ? "bg-emerald-400" : tPct >= 40 ? "bg-amber-400" : "bg-red-400";
+
+    html += '<tr data-hm-sector="'+esc(r.name)+'" class="'+(isActive?"active":"")+'">';
+    html += '<td><div class="text-[13px] font-medium text-n-800">'+esc(r.name)+'</div><div class="text-[11px] text-n-400">'+r.n+'</div></td>';
+    html += '<td><div class="flex items-center gap-1.5"><div class="bar-track"><div class="bar-center"></div><div class="bar-fill '+rsCol+'" style="left:'+rsLeft+';width:'+rsPct+'%"></div></div><span class="text-[11px] font-mono font-medium '+(rsPos?"text-emerald-600":"text-red-500")+' w-10 text-right shrink-0">'+(r.rs1m>=0?"+":"")+r.rs1m.toFixed(1)+'%</span></div></td>';
+    html += '<td><div class="flex items-center gap-1.5"><div class="bar-track"><div class="bar-center"></div><div class="bar-fill '+rs3Col+'" style="left:'+rs3Left+';width:'+rs3Pct+'%"></div></div><span class="text-[11px] font-mono font-medium '+(rs3Pos?"text-emerald-600":"text-red-500")+' w-10 text-right shrink-0">'+(r.rs3m>=0?"+":"")+r.rs3m.toFixed(1)+'%</span></div></td>';
+    html += '<td><div class="flex items-center gap-1.5"><div class="bar-track"><div class="bar-fill '+tCol+'" style="width:'+tPct+'%"></div></div><span class="text-[10px] font-mono font-medium text-n-400 w-7 text-right shrink-0">'+tPct.toFixed(0)+'%</span></div></td>';
+    html += '<td class="text-center">'+(inflect?'<span class="text-amber-500 text-[10px]" title="Inflecting">\u21BB</span>':'')+'</td>';
+    if (showCmt) {
+      var body = sectorCmt[r.name];
+      html += '<td style="border-left:1px solid #f5f5f5" class="align-top"><div class="cmt-text" style="font-size:11px">'+(body?boldTextHtml(body):'<span class="text-n-300">\u2014</span>')+'</div></td>';
+    }
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// --- Commentary -------------------------------------------------------------
 
 function renderCommentary() {
-  const el = document.getElementById("commentary");
+  var cmt = COMMENTARY[state.mkt] || {};
+  var dp = document.getElementById("daily-panel");
+  if (dp) {
+    if (!state.showC || !cmt.daily) { dp.innerHTML = ""; }
+    else { dp.innerHTML = '<div class="border-t-2 border-n-900 pt-6"><div class="cmt-label" style="color:#171717">Price Action \u2014 3 Apr</div><div class="cmt-text" style="font-size:13px">'+boldTextHtml(cmt.daily)+'</div></div>'; }
+  }
+  var el = document.getElementById("commentary");
   if (!state.showC) { el.innerHTML = ""; return; }
-  const cmt = COMMENTARY[state.mkt] || {};
-  el.innerHTML = `
-    ${cmt.daily ? '<div class="p-3 bg-amber-50 rounded-lg border border-amber-200"><div class="text-xs uppercase tracking-wide text-amber-600 font-semibold mb-1">Price Action \u2014 2 Apr</div><div class="text-sm text-amber-900 leading-relaxed">' + boldTextHtml(cmt.daily) + '</div></div>' : ''}
-    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200"><div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-1">Sector Leadership</div><div class="text-sm text-slate-700 leading-relaxed">${boldTextHtml(cmt.sectors || "")}</div></div>
-    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200"><div class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-1">Thematic Clusters</div><div class="text-sm text-slate-700 leading-relaxed">${boldTextHtml(cmt.themes || "")}</div></div>
-    <div class="p-3 bg-blue-50 rounded-lg border border-blue-200"><div class="text-xs uppercase tracking-wide text-blue-500 font-semibold mb-1">Synthesis</div><div class="text-sm text-blue-900 leading-relaxed">${boldTextHtml(cmt.synthesis || "")}</div></div>
-  `;
+  el.innerHTML = cmt.themes ? '<div class="border-t border-n-200 pt-6"><div class="cmt-label" style="color:#171717">Thematic Clusters</div><div class="cmt-text" style="font-size:13px">'+boldTextHtml(cmt.themes)+'</div></div>' : '';
 }
+
+// --- Filters ----------------------------------------------------------------
 
 function renderFilters() {
-  const fl = state.fl;
-  function sel(key, label, opts) {
-    return `<select data-filter="${key}" class="px-2 py-1 text-xs border border-slate-200 rounded-md bg-white focus:outline-none">` +
-      opts.map(o => `<option value="${esc(o)}" ${fl[key] === o ? "selected" : ""}>${o === "All" ? label + ": All" : o === "\u2014" ? "None" : esc(o)}</option>`).join("") +
-      `</select>`;
+  var fl = state.fl;
+  function sel(key,label,opts) {
+    var h = '<select data-filter="'+key+'" class="filter-input">';
+    for (var i = 0; i < opts.length; i++) { var o = opts[i]; h += '<option value="'+esc(o)+'" '+(fl[key]===o?"selected":"")+'>'+(o==="All"?label:o==="\u2014"?"None":esc(o))+'</option>'; }
+    return h + '</select>';
   }
-  // Build sector list dynamically from current engine
-  const sectorSet = new Set();
-  if (engineCache) engineCache.stocks.forEach(r => { if (r.s) sectorSet.add(r.s); });
-  const sectorOpts = ["All", ...Array.from(sectorSet).sort()];
-  document.getElementById("filter-bar").innerHTML = `
-    <input type="text" id="search-input" placeholder="Search..." value="${esc(fl.q)}" class="px-2 py-1 text-sm border border-slate-200 rounded-md w-40 focus:outline-none focus:border-slate-400" />
-    ${sel("sector", "Sector", sectorOpts)}
-    ${sel("leader", "Leader", FOPTS.leader)}
-    ${sel("confirm", "Confirm", FOPTS.confirm)}
-    ${sel("signal", "Signal", FOPTS.signal)}
-    ${sel("trend", "Trend", FOPTS.trend)}
-    <button id="clear-filters" class="text-xs text-slate-400 hover:text-slate-700 px-2 py-1">Clear</button>
-  `;
+  var sectorSet = {};
+  if (engineCache) { for (var i = 0; i < engineCache.stocks.length; i++) { var s = engineCache.stocks[i].s; if (s) sectorSet[s] = 1; } }
+  var sectorOpts = ["All"].concat(Object.keys(sectorSet).sort());
+  document.getElementById("filter-bar").innerHTML =
+    '<input type="text" id="search-input" placeholder="Search\u2026" value="'+esc(fl.q)+'" class="filter-input w-32" />' +
+    sel("sector","Sector",sectorOpts) +
+    sel("leader","Leader",FOPTS.leader) +
+    sel("confirm","Confirm",FOPTS.confirm) +
+    sel("signal","Signal",FOPTS.signal) +
+    sel("trend","Trend",FOPTS.trend) +
+    '<button id="clear-filters" class="text-[11px] text-n-400 hover:text-n-700 transition-colors ml-1">Clear</button>';
 }
 
+// --- Table ------------------------------------------------------------------
+
 function renderTable(filtered, totalCount) {
-  const cols = [
-    { key: "t", label: "Ticker", align: "left", sort: true, w: 88 },
-    { key: "c", label: "Company", align: "left", w: 130 },
-    { key: "s", label: "Sector", align: "left", w: 120 },
-    { key: "px", label: "Last Price", align: "center", sort: true, w: 82 },
-    { key: "mc", label: "Mkt Cap (US$)", align: "center", sort: true, w: 82 },
-    { key: "r1m", label: "1M", align: "center", sort: true, border: true, w: 66 },
-    { key: "r3m", label: "3M", align: "center", sort: true, w: 66 },
-    { key: "eps", label: "Est. EPS \u0394", align: "center", sort: true, w: 74 },
-    { key: "rs1m", label: "RS 1M", align: "center", sort: true, border: true, w: 66 },
-    { key: "rs3m", label: "RS 3M", align: "center", sort: true, w: 66 },
-    { key: "rs6m", label: "RS 6M", align: "center", sort: true, w: 66 },
-    { key: "rs1y", label: "RS 1Y", align: "center", sort: true, w: 66 },
-    { key: "ms", label: "Master", align: "center", sort: true, border: true, w: 64 },
-    { key: "ac", label: "Acceleration", align: "center", sort: true, w: 84 },
-    { key: "tr", label: "Trend", align: "center", w: 52 },
-    { key: "lf", label: "Leader", align: "center", border: true, w: 108 },
-    { key: "cf", label: "Confirm", align: "center", w: 104 },
-    { key: "sig", label: "Signal", align: "center", w: 120 },
+  var cols = [
+    {key:"t",label:"Ticker",align:"left",sort:true,w:88},{key:"c",label:"Company",align:"left",w:130},{key:"s",label:"Sector",align:"left",w:120},
+    {key:"px",label:"Last Price",align:"center",sort:true,w:82},{key:"mc",label:"Mkt Cap (US$)",align:"center",sort:true,w:88},
+    {key:"r1m",label:"1M",align:"center",sort:true,w:62},{key:"r3m",label:"3M",align:"center",sort:true,w:62},{key:"eps",label:"Est. EPS \u0394",align:"center",sort:true,w:72},
+    {key:"rs1m",label:"RS 1M",align:"center",sort:true,w:64},{key:"rs3m",label:"RS 3M",align:"center",sort:true,w:64},{key:"rs6m",label:"RS 6M",align:"center",sort:true,w:64},{key:"rs1y",label:"RS 1Y",align:"center",sort:true,w:64},
+    {key:"ms",label:"Master",align:"center",sort:true,w:62},{key:"ac",label:"Accel",align:"center",sort:true,w:62},{key:"tr",label:"Trend",align:"center",w:46},
+    {key:"lf",label:"Leader",align:"center",w:90},{key:"cf",label:"Confirm",align:"center",w:90},{key:"sig",label:"Signal",align:"center",w:90},
   ];
-
-  // Colgroup for fixed widths
-  let colgroup = '<colgroup>';
-  for (const col of cols) {
-    colgroup += `<col style="width:${col.w}px">`;
-  }
-  colgroup += '</colgroup>';
-
-  // Group headers
-  let thead = '<thead><tr class="bg-slate-800 text-white">';
-  thead += '<th class="px-2 py-2 text-left text-xs font-semibold" colspan="5">IDENTIFICATION</th>';
-  thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">RETURNS</th>';
-  thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="4">RELATIVE STRENGTH</th>';
-  thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">SCORES</th>';
-  thead += '<th class="px-2 py-2 text-center text-xs font-semibold border-l border-slate-600" colspan="3">SIGNALS</th>';
-  thead += '</tr><tr class="bg-slate-100 border-b border-slate-200">';
-  for (const col of cols) {
-    const bdr = col.border ? " border-l border-slate-200" : "";
-    if (col.sort) {
-      thead += `<th data-sortable data-col="${col.key}" class="px-2 py-1.5 text-xs font-semibold text-slate-500 cursor-pointer hover:text-slate-800 select-none whitespace-nowrap text-${col.align}${bdr}">${col.label}${sortArrow(col.key)}</th>`;
-    } else {
-      thead += `<th class="px-2 py-1.5 text-xs text-slate-500 text-${col.align}${bdr}">${col.label}</th>`;
-    }
+  var cg = '<colgroup>'; for (var i = 0; i < cols.length; i++) { cg += '<col style="width:'+cols[i].w+'px">'; } cg += '</colgroup>';
+  var thead = '<thead><tr>';
+  for (var i2 = 0; i2 < cols.length; i2++) {
+    var col = cols[i2];
+    if (col.sort) { thead += '<th data-sortable data-col="'+col.key+'" class="text-'+col.align+' cursor-pointer">'+col.label+sortArrow(col.key)+'</th>'; }
+    else { thead += '<th class="text-'+col.align+'">'+col.label+'</th>'; }
   }
   thead += '</tr></thead>';
-
-  // Body rows
-  const rows = filtered.slice(0, 200);
-  let tbody = '<tbody>';
-  if (rows.length === 0) {
-    tbody += '<tr><td colspan="18" class="px-4 py-8 text-center text-slate-400">No Names Match Filters</td></tr>';
-  } else {
-    for (let idx = 0; idx < rows.length; idx++) {
-      const r = rows[idx];
-      const sig = getSig(r);
-      const rowCls = sig === "EXIT" ? "bg-red-50" : sig === "WATCH" ? "bg-amber-50" : idx % 2 === 1 ? "bg-slate-50" : "";
-      const mcStr = r.mc >= 1000 ? (r.mc / 1000).toFixed(1) + "T" : r.mc.toFixed(0) + "B";
-      const trStr = r.tr === 1 ? '<span class="text-emerald-600 font-bold">\u2713</span>' : '<span class="text-slate-300">\u2014</span>';
-      tbody += `<tr class="border-b border-slate-100 hover:bg-slate-50 ${rowCls}">`;
-      tbody += `<td class="px-2 py-1.5 font-mono font-semibold text-slate-900 truncate">${esc(r.t)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-slate-600 truncate">${esc(r.c)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-slate-500 truncate">${esc(r.s)}</td>`;
-      const pxStr = r.px != null ? r.px.toLocaleString(undefined, { minimumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0, maximumFractionDigits: r.px < 10 ? 2 : r.px < 1000 ? 1 : 0 }) : "\u2014";
-      tbody += `<td class="px-2 py-1.5 text-center text-slate-600 font-mono">${pxStr}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center text-slate-600 font-mono">${mcStr}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${pctHtml(r.r1m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.r3m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.eps, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${pctHtml(r.rs1m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.rs3m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.rs6m, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${pctHtml(r.rs1y, true)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${scoreHtml(r.ms)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${scoreHtml(r.ac)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${trStr}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center border-l border-slate-100">${badgeHtml(r.lf)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(r.cf)}</td>`;
-      tbody += `<td class="px-2 py-1.5 text-center">${badgeHtml(sig)}</td>`;
+  var rws = filtered.slice(0,200);
+  var tbody = '<tbody>';
+  if (rws.length === 0) { tbody += '<tr><td colspan="'+cols.length+'" class="px-6 py-12 text-center text-n-400 text-sm">No stocks match current filters</td></tr>'; }
+  else {
+    for (var idx = 0; idx < rws.length; idx++) {
+      var r = rws[idx];
+      var sig = getSig(r);
+      var mcStr = r.mc >= 1000 ? (r.mc/1000).toFixed(1)+"T" : r.mc.toFixed(0)+"B";
+      var pxStr = r.px != null ? r.px.toLocaleString(undefined,{minimumFractionDigits:r.px<10?2:r.px<1000?1:0,maximumFractionDigits:r.px<10?2:r.px<1000?1:0}) : "\u2014";
+      var trStr = r.tr === 1 ? '<span class="text-emerald-500">\u2713</span>' : '<span class="text-n-300">\u2014</span>';
+      tbody += '<tr>';
+      tbody += '<td class="text-left font-mono font-semibold text-n-900">'+esc(r.t)+'</td>';
+      tbody += '<td class="text-left text-n-500 truncate" style="max-width:130px">'+esc(r.c)+'</td>';
+      tbody += '<td class="text-left text-n-500 truncate" style="max-width:120px">'+esc(r.s)+'</td>';
+      tbody += '<td class="text-center font-mono text-n-600">'+pxStr+'</td>';
+      tbody += '<td class="text-center font-mono text-n-600">'+mcStr+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.r1m,true)+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.r3m,true)+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.eps,true)+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.rs1m,true)+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.rs3m,true)+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.rs6m,true)+'</td>';
+      tbody += '<td class="text-center">'+pctHtml(r.rs1y,true)+'</td>';
+      tbody += '<td class="text-center">'+scoreHtml(r.ms)+'</td>';
+      tbody += '<td class="text-center">'+scoreHtml(r.ac)+'</td>';
+      tbody += '<td class="text-center">'+trStr+'</td>';
+      tbody += '<td class="text-center">'+badgeHtml(r.lf)+'</td>';
+      tbody += '<td class="text-center">'+badgeHtml(r.cf)+'</td>';
+      tbody += '<td class="text-center">'+badgeHtml(sig)+'</td>';
       tbody += '</tr>';
     }
   }
   tbody += '</tbody>';
-
-  const tableEl = document.getElementById("data-table");
-  tableEl.style.tableLayout = "fixed";
-  tableEl.innerHTML = colgroup + thead + tbody;
-  document.getElementById("table-footer").textContent = `Showing ${Math.min(filtered.length, 200)} of ${totalCount} \u2022 Computed from Raw Bloomberg Data`;
+  document.getElementById("data-table").innerHTML = cg + thead + tbody;
+  document.getElementById("table-footer").innerHTML = 'Showing '+filtered.length+' of '+totalCount+' \u2002\u00b7\u2002'+MARKET_LABELS[state.mkt]+' \u2002\u00b7\u2002Min cap US$'+state.cfg.minCap+'B';
 }
 
+// --- Config -----------------------------------------------------------------
+
 function renderConfig() {
-  const c = state.cfg;
-  function row(label, key, step, min, max, desc) {
-    return `<div class="flex items-center py-2 border-b border-slate-100">
-      <div class="w-52 text-sm text-slate-700">${label}</div>
-      <input type="number" data-cfg="${key}" value="${c[key]}" step="${step || 0.01}" ${min != null ? `min="${min}"` : ""} ${max != null ? `max="${max}"` : ""}
-        class="w-20 px-2 py-1 text-sm font-mono font-semibold text-blue-700 border border-blue-200 rounded bg-blue-50 focus:outline-none focus:border-blue-400" />
-      ${desc ? `<div class="text-xs text-slate-400 italic ml-3">${desc}</div>` : ""}
-    </div>`;
-  }
-
-  function section(title, content) {
-    return `<div class="mb-5"><h3 class="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-2 pb-1 border-b border-slate-200">${title}</h3>${content}</div>`;
-  }
-
-  let html = section("Composite Weights",
-    row("1M Weight", "w1m", 0.05, 0, 1, "Short-term momentum") +
-    row("3M Weight", "w3m", 0.05, 0, 1, "Primary signal") +
-    row("6M Weight", "w6m", 0.05, 0, 1, "Medium-term") +
-    row("1Y Weight", "w1y", 0.05, 0, 1, "Secular (skip-month)") +
-    `<div class="text-xs text-slate-400 mt-1">Sum: ${(c.w1m + c.w3m + c.w6m + c.w1y).toFixed(2)} (Auto-Normalized)</div>`
-  );
-  html += section("Universe Filters",
-    row("Min Market Cap (US$B)", "minCap", 1, 0)
-  );
-  html += section("Trend Thresholds",
-    row("52-Week High Proximity", "hiProx", 0.05, 0.5, 1) +
-    row("Min Trend Score (of 3)", "minTrend", 1, 1, 3)
-  );
-  html += section("Master Score Blend",
-    row("VolAdj Weight", "volAdj", 0.05, 0, 1) +
-    row("Industry Weight", "ind", 0.05, 0, 1)
-  );
-  html += section("Leader Thresholds (percentile)",
-    row("Top Decile", "decile", 5, 50, 99) +
-    row("Top Quartile", "quartile", 5, 25, 95)
-  );
-  html += section("Signal Parameters",
-    row("Winsorize Cap (%)", "winsorize", 50, 50, 500) +
-    row("Accel Gate (Percentile)", "accelGate", 5, 0, 75)
-  );
-  html += section("Exit Signals",
-    row("EXIT Threshold (of 3)", "exitThresh", 1, 1, 3) +
-    row("WATCH Threshold (of 3)", "watchThresh", 1, 1, 3)
-  );
-
+  var fields = [{key:"w1m",label:"1M Weight",step:0.05},{key:"w3m",label:"3M Weight",step:0.05},{key:"w6m",label:"6M Weight",step:0.05},{key:"w1y",label:"1Y Weight",step:0.05},{key:"minCap",label:"Min Market Cap ($B)",step:1},{key:"hiProx",label:"52W High Proximity (%)",step:0.05},{key:"minTrend",label:"Trend Signals Required",step:1},{key:"volAdj",label:"Volatility Adjustment",step:0.1},{key:"ind",label:"Industry Relative Weight",step:0.1},{key:"decile",label:"Leader Threshold (%)",step:5},{key:"quartile",label:"Confirm Threshold (%)",step:5},{key:"winsorize",label:"Winsorize Cap (%)",step:50},{key:"accelGate",label:"Acceleration Gate (%)",step:5},{key:"exitThresh",label:"Exit Signals Required",step:1},{key:"watchThresh",label:"Watch Signals Required",step:1}];
+  var html = '<div class="grid grid-cols-2 gap-4">';
+  for (var i = 0; i < fields.length; i++) { var f = fields[i]; html += '<div><label class="text-[11px] text-n-400 block mb-1">'+f.label+'</label><input type="number" data-cfg="'+f.key+'" value="'+state.cfg[f.key]+'" step="'+f.step+'" class="cfg-input"/></div>'; }
+  html += '</div>';
   document.getElementById("cfg-body").innerHTML = html;
 }
 
-// --- Main Render -------------------------------------------------------------
+// --- Main -------------------------------------------------------------------
 
 function render() {
-  renderMarketTabs();
   renderTabButtons();
-
-  if (state.tab === "config") {
-    renderConfig();
-  }
-
-  // Always compute engine for regime bar / KPIs even when on config tab
-  const engine = getEngine();
+  renderRegimeStrip();
+  if (state.tab === "config") { renderConfig(); }
+  var engine = getEngine();
   engineCache = engine;
-
   if (state.tab === "screener") {
     renderRegime(engine);
-    renderKPIs(engine);
+    renderSectorHeatmap();
     renderCommentary();
     renderFilters();
-    const filtered = getFiltered(engine);
+    var filtered = getFiltered(engine);
     renderTable(filtered, engine.stocks.length);
   }
 }
 
-// --- Event Handling ----------------------------------------------------------
+// --- Events -----------------------------------------------------------------
 
 document.addEventListener("click", function(e) {
-  const btn = e.target.closest("button");
-  if (!btn) return;
-
-  // Market tab
-  if (btn.dataset.mkt) {
-    state.mkt = btn.dataset.mkt;
-    state.tab = "screener";
-    state.fl = { sector: "All", leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
-    render();
-    return;
-  }
-
-  // Screener / Config / Guide tabs
-  if (btn.id === "tab-screener") { state.tab = "screener"; render(); return; }
-  if (btn.id === "tab-config") { state.tab = "config"; render(); return; }
-  if (btn.id === "tab-guide") { state.tab = "guide"; render(); return; }
-
-  // Toggle commentary
-  if (btn.id === "toggle-commentary") { state.showC = !state.showC; renderKPIs(engineCache); renderCommentary(); return; }
-
-  // Clear filters
-  if (btn.id === "clear-filters") {
-    state.fl = { sector: "All", leader: "All", confirm: "All", signal: "All", trend: "All", q: "" };
-    renderFilters();
-    const filtered = getFiltered(engineCache);
-    renderTable(filtered, engineCache.stocks.length);
-    return;
-  }
-
-  // Reset config
-  if (btn.id === "cfg-reset") {
-    state.cfg = { ...DEFAULT_CFG };
-    render();
-    return;
-  }
+  var btn = e.target.closest("button"); if (!btn) return;
+  if (btn.dataset.regimeMkt) { state.mkt=btn.dataset.regimeMkt; state.tab="screener"; state.fl={sector:"All",leader:"All",confirm:"All",signal:"All",trend:"All",q:""}; state._hmSort={col:"rs1m",dir:"desc"}; render(); return; }
+  if (btn.dataset.mkt) { state.mkt=btn.dataset.mkt; state.tab="screener"; state.fl={sector:"All",leader:"All",confirm:"All",signal:"All",trend:"All",q:""}; state._hmSort={col:"rs1m",dir:"desc"}; render(); return; }
+  if (btn.id==="tab-screener") { state.tab="screener"; render(); return; }
+  if (btn.id==="tab-config") { state.tab="config"; render(); return; }
+  if (btn.id==="tab-guide") { state.tab="guide"; render(); return; }
+  if (btn.id==="toggle-commentary") { state.showC=!state.showC; renderRegime(engineCache); renderSectorHeatmap(); renderCommentary(); return; }
+  if (btn.id==="clear-filters") { state.fl={sector:"All",leader:"All",confirm:"All",signal:"All",trend:"All",q:""}; renderFilters(); renderSectorHeatmap(); var filtered=getFiltered(engineCache); renderTable(filtered,engineCache.stocks.length); return; }
+  if (btn.id==="cfg-reset") { state.cfg={w1m:DEFAULT_CFG.w1m,w3m:DEFAULT_CFG.w3m,w6m:DEFAULT_CFG.w6m,w1y:DEFAULT_CFG.w1y,minCap:DEFAULT_CFG.minCap,hiProx:DEFAULT_CFG.hiProx,minTrend:DEFAULT_CFG.minTrend,volAdj:DEFAULT_CFG.volAdj,ind:DEFAULT_CFG.ind,decile:DEFAULT_CFG.decile,quartile:DEFAULT_CFG.quartile,winsorize:DEFAULT_CFG.winsorize,accelGate:DEFAULT_CFG.accelGate,exitThresh:DEFAULT_CFG.exitThresh,watchThresh:DEFAULT_CFG.watchThresh}; render(); return; }
 });
+document.addEventListener("click", function(e) { var th=e.target.closest("th[data-sortable]"); if(!th)return; var col=th.dataset.col; if(state.sCol===col){state.sDir=state.sDir==="desc"?"asc":"desc";}else{state.sCol=col;state.sDir="desc";} var filtered=getFiltered(engineCache); renderTable(filtered,engineCache.stocks.length); });
+document.addEventListener("click", function(e) { var th=e.target.closest("th[data-hm-sort]"); if(!th)return; var col=th.dataset.hmSort; if(!state._hmSort)state._hmSort={col:"rs1m",dir:"desc"}; if(state._hmSort.col===col){state._hmSort.dir=state._hmSort.dir==="desc"?"asc":"desc";}else{state._hmSort={col:col,dir:"desc"};} renderSectorHeatmap(); renderCommentary(); });
+document.addEventListener("click", function(e) { var row=e.target.closest("[data-hm-sector]"); if(!row||row.tagName==="TH")return; var sector=row.dataset.hmSector; state.fl.sector=state.fl.sector===sector?"All":sector; renderSectorHeatmap(); renderFilters(); var filtered=getFiltered(engineCache); renderTable(filtered,engineCache.stocks.length); });
+document.addEventListener("change", function(e) { if(e.target.dataset.filter){state.fl[e.target.dataset.filter]=e.target.value;renderSectorHeatmap();var filtered=getFiltered(engineCache);renderTable(filtered,engineCache.stocks.length);return;} if(e.target.dataset.cfg){state.cfg[e.target.dataset.cfg]=parseFloat(e.target.value)||0;render();return;} });
+document.addEventListener("input", function(e) { if(e.target.id==="search-input"){state.fl.q=e.target.value;var filtered=getFiltered(engineCache);renderTable(filtered,engineCache.stocks.length);return;} if(e.target.dataset.cfg){var val=parseFloat(e.target.value);if(!isNaN(val)){state.cfg[e.target.dataset.cfg]=val;var engine=getEngine();engineCache=engine;if(state.tab==="screener"){renderRegime(engine);var filtered2=getFiltered(engine);renderTable(filtered2,engine.stocks.length);}}} });
 
-// Sort headers (delegated)
-document.addEventListener("click", function(e) {
-  const th = e.target.closest("th[data-sortable]");
-  if (!th) return;
-  const col = th.dataset.col;
-  if (state.sCol === col) { state.sDir = state.sDir === "desc" ? "asc" : "desc"; }
-  else { state.sCol = col; state.sDir = "desc"; }
-  const filtered = getFiltered(engineCache);
-  renderTable(filtered, engineCache.stocks.length);
-});
-
-// Filter dropdowns
-document.addEventListener("change", function(e) {
-  // Filter selects
-  if (e.target.dataset.filter) {
-    state.fl[e.target.dataset.filter] = e.target.value;
-    const filtered = getFiltered(engineCache);
-    renderTable(filtered, engineCache.stocks.length);
-    return;
-  }
-
-  // Config inputs
-  if (e.target.dataset.cfg) {
-    const key = e.target.dataset.cfg;
-    state.cfg[key] = parseFloat(e.target.value) || 0;
-    render();
-    return;
-  }
-});
-
-// Search input (live filtering)
-document.addEventListener("input", function(e) {
-  if (e.target.id === "search-input") {
-    state.fl.q = e.target.value;
-    const filtered = getFiltered(engineCache);
-    renderTable(filtered, engineCache.stocks.length);
-    return;
-  }
-
-  // Config inputs (live recalc)
-  if (e.target.dataset.cfg) {
-    const key = e.target.dataset.cfg;
-    const val = parseFloat(e.target.value);
-    if (!isNaN(val)) {
-      state.cfg[key] = val;
-      // Debounce-like: only re-render if value actually changed
-      const engine = getEngine();
-      engineCache = engine;
-      if (state.tab === "screener") {
-        renderRegime(engine);
-        renderKPIs(engine);
-        const filtered = getFiltered(engine);
-        renderTable(filtered, engine.stocks.length);
-      }
-      // Update weight sum display
-      const sumEl = document.querySelector(".text-xs.text-slate-400.mt-1");
-      if (sumEl) sumEl.textContent = `Sum: ${(state.cfg.w1m + state.cfg.w3m + state.cfg.w6m + state.cfg.w1y).toFixed(2)} (Auto-Normalized)`;
-    }
-  }
-});
-
-// --- Init --------------------------------------------------------------------
-
-document.addEventListener("DOMContentLoaded", function() {
-  render();
-});
-
-// Also fire immediately if DOM is already ready
-if (document.readyState !== "loading") {
-  render();
-}
+// --- Init -------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() { render(); });
+if (document.readyState !== "loading") { render(); }
