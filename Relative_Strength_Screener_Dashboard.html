@@ -553,7 +553,7 @@ function renderRegime(engine) {
     else { var c = v >= 0 ? "text-emerald-600" : "text-red-500"; html += '<div class="text-center"><div class="text-[10px] text-n-400 font-medium">'+k+'</div><div class="text-[13px] font-mono font-semibold '+c+'">'+(v>=0?"+":"")+v.toFixed(1)+'%</div></div>'; }
   }
   html += '<div class="flex-1"></div>';
-  html += '<button id="toggle-commentary" class="text-[11px] text-n-400 hover:text-n-700 transition-colors">'+(state.showC ? "Hide commentary" : "Show commentary")+'</button>';
+  html += '<button id="toggle-commentary" class="text-[11px] text-n-400 hover:text-n-700 transition-colors">'+(state.showC ? "Hide analysis" : "Show analysis")+'</button>';
   el.innerHTML = html;
 }
 
@@ -623,6 +623,7 @@ var _sectorSortOrder = [];
 function renderSectorHeatmap() {
   var el = document.getElementById("sector-heatmap");
   if (!el || !engineCache) { if (el) el.innerHTML = ""; return; }
+  if (!state.showC) { el.innerHTML = ""; return; }
   var stocks = engineCache.stocks;
   var sectors = {};
   for (var i = 0; i < stocks.length; i++) {
